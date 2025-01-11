@@ -13,7 +13,7 @@ This is a puzzle game designed to combine a stopwatch, memory component, and con
    - The player must use switches **SW7 to SW0** to control the LEDs.
    - Each switch controls a specific LED. Toggling a switch will either turn the LED on or off.
    - If an LED is turned off, but the switch controlling it is raised, it will turn on. If it’s on, raising the switch will turn it off.
-   - The goal is to turn on only the relevant LEDs (**LED9 to LED4**) by raising the correct switches.
+   - The goal is to turn on only the relevant LEDs (**LED4 to LED9**) by raising the correct switches.
 
 3. **End of Game**: 
    - The game ends when all the correct switches are raised, and the corresponding LEDs are turned on.
