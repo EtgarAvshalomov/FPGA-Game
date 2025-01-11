@@ -39,5 +39,5 @@ This is a puzzle game designed to combine a stopwatch, memory component, and con
 
 ## **Technical Details**
 
-- **FPGA Board**: **Altera DE0**.
-- **Design Software**: **Quartus II**.
+- **FPGA Board**: Altera DE0.
+- **Design Software**: Quartus II.
