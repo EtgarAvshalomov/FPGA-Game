@@ -1,0 +1,1255 @@
+Quartus II
+Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
+10
+767
+OFF
+OFF
+OFF
+ON
+ON
+ON
+FV_OFF
+Level2
+0
+0
+VRSM_ON
+VHSM_ON
+0
+-- Start Library Paths --
+-- End Library Paths --
+-- Start VHDL Libraries --
+-- End VHDL Libraries --
+# entity
+Game
+# storage
+db|Game.(0).cnf
+db|Game.(0).cnf
+# case_insensitive
+# source_file
+game.bdf
+ac635cd9e88e884164281a7a21cbcfb0
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+|
+}
+# macro_sequence
+
+# end
+# entity
+SECGEN
+# storage
+db|Game.(1).cnf
+db|Game.(1).cnf
+# case_insensitive
+# source_file
+secgen.bdf
+572c9d33f2db85351d38cc726a0695d
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+SECGEN:inst3
+}
+# macro_sequence
+
+# end
+# entity
+lpm_counter2
+# storage
+db|Game.(2).cnf
+db|Game.(2).cnf
+# case_insensitive
+# source_file
+lpm_counter2.tdf
+892d20f81566db30617684a6c474b695
+7
+# used_port {
+sclr
+-1
+3
+cout
+-1
+3
+cnt_en
+-1
+3
+clock
+-1
+3
+aclr
+-1
+3
+}
+# include_file {
+lpm_counter.inc
+c5cfeeabc5f2ab60b3453f6abbc42b41
+}
+# hierarchies {
+SECGEN:inst3|lpm_counter2:inst
+}
+# macro_sequence
+
+# end
+# entity
+lpm_counter
+# storage
+db|Game.(3).cnf
+db|Game.(3).cnf
+# case_insensitive
+# source_file
+|altera|91sp2|quartus|libraries|megafunctions|lpm_counter.tdf
+151f75e8fcf5e87e72b7df6bb2ea
+7
+# user_parameter {
+AUTO_CARRY_CHAINS
+ON
+AUTO_CARRY
+USR
+IGNORE_CARRY_BUFFERS
+OFF
+IGNORE_CARRY
+USR
+AUTO_CASCADE_CHAINS
+ON
+AUTO_CASCADE
+USR
+IGNORE_CASCADE_BUFFERS
+OFF
+IGNORE_CASCADE
+USR
+LPM_WIDTH
+26
+PARAMETER_UNKNOWN
+USR
+LPM_DIRECTION
+UP
+PARAMETER_UNKNOWN
+USR
+LPM_MODULUS
+50000000
+PARAMETER_UNKNOWN
+USR
+LPM_AVALUE
+UNUSED
+PARAMETER_UNKNOWN
+DEF
+LPM_SVALUE
+UNUSED
+PARAMETER_UNKNOWN
+DEF
+LPM_PORT_UPDOWN
+PORT_UNUSED
+PARAMETER_UNKNOWN
+USR
+DEVICE_FAMILY
+Cyclone III
+PARAMETER_UNKNOWN
+USR
+CARRY_CHAIN
+MANUAL
+PARAMETER_UNKNOWN
+USR
+CARRY_CHAIN_LENGTH
+48
+CARRY_CHAIN_LENGTH
+USR
+NOT_GATE_PUSH_BACK
+ON
+NOT_GATE_PUSH_BACK
+USR
+CARRY_CNT_EN
+SMART
+PARAMETER_UNKNOWN
+DEF
+LABWIDE_SCLR
+ON
+PARAMETER_UNKNOWN
+DEF
+USE_NEW_VERSION
+TRUE
+PARAMETER_UNKNOWN
+DEF
+CBXI_PARAMETER
+cntr_gel
+PARAMETER_UNKNOWN
+USR
+}
+# used_port {
+sclr
+-1
+3
+q9
+-1
+3
+q8
+-1
+3
+q7
+-1
+3
+q6
+-1
+3
+q5
+-1
+3
+q4
+-1
+3
+q3
+-1
+3
+q25
+-1
+3
+q24
+-1
+3
+q23
+-1
+3
+q22
+-1
+3
+q21
+-1
+3
+q20
+-1
+3
+q2
+-1
+3
+q19
+-1
+3
+q18
+-1
+3
+q17
+-1
+3
+q16
+-1
+3
+q15
+-1
+3
+q14
+-1
+3
+q13
+-1
+3
+q12
+-1
+3
+q11
+-1
+3
+q10
+-1
+3
+q1
+-1
+3
+q0
+-1
+3
+cout
+-1
+3
+cnt_en
+-1
+3
+clock
+-1
+3
+aclr
+-1
+3
+}
+# hierarchies {
+SECGEN:inst3|lpm_counter2:inst|lpm_counter:lpm_counter_component
+}
+# macro_sequence
+
+# end
+# entity
+cntr_gel
+# storage
+db|Game.(4).cnf
+db|Game.(4).cnf
+# case_insensitive
+# source_file
+db|cntr_gel.tdf
+dc26ff61174187aaf620f4a8c1b29e22
+7
+# used_port {
+sclr
+-1
+3
+q9
+-1
+3
+q8
+-1
+3
+q7
+-1
+3
+q6
+-1
+3
+q5
+-1
+3
+q4
+-1
+3
+q3
+-1
+3
+q25
+-1
+3
+q24
+-1
+3
+q23
+-1
+3
+q22
+-1
+3
+q21
+-1
+3
+q20
+-1
+3
+q2
+-1
+3
+q19
+-1
+3
+q18
+-1
+3
+q17
+-1
+3
+q16
+-1
+3
+q15
+-1
+3
+q14
+-1
+3
+q13
+-1
+3
+q12
+-1
+3
+q11
+-1
+3
+q10
+-1
+3
+q1
+-1
+3
+q0
+-1
+3
+cout
+-1
+3
+cnt_en
+-1
+3
+clock
+-1
+3
+aclr
+-1
+3
+}
+# hierarchies {
+SECGEN:inst3|lpm_counter2:inst|lpm_counter:lpm_counter_component|cntr_gel:auto_generated
+}
+# macro_sequence
+
+# end
+# entity
+cmpr_5hc
+# storage
+db|Game.(5).cnf
+db|Game.(5).cnf
+# case_insensitive
+# source_file
+db|cmpr_5hc.tdf
+2490a2649fd3907063c5cbb7ab3c7edb
+7
+# used_port {
+datab9
+-1
+3
+datab8
+-1
+3
+datab7
+-1
+3
+datab6
+-1
+3
+datab5
+-1
+3
+datab4
+-1
+3
+datab3
+-1
+3
+datab25
+-1
+3
+datab24
+-1
+3
+datab23
+-1
+3
+datab22
+-1
+3
+datab21
+-1
+3
+datab20
+-1
+3
+datab2
+-1
+3
+datab19
+-1
+3
+datab18
+-1
+3
+datab17
+-1
+3
+datab16
+-1
+3
+datab15
+-1
+3
+datab14
+-1
+3
+datab13
+-1
+3
+datab12
+-1
+3
+datab11
+-1
+3
+datab10
+-1
+3
+datab1
+-1
+3
+datab0
+-1
+3
+dataa9
+-1
+3
+dataa8
+-1
+3
+dataa7
+-1
+3
+dataa6
+-1
+3
+dataa5
+-1
+3
+dataa4
+-1
+3
+dataa3
+-1
+3
+dataa25
+-1
+3
+dataa24
+-1
+3
+dataa23
+-1
+3
+dataa22
+-1
+3
+dataa21
+-1
+3
+dataa20
+-1
+3
+dataa2
+-1
+3
+dataa19
+-1
+3
+dataa18
+-1
+3
+dataa17
+-1
+3
+dataa16
+-1
+3
+dataa15
+-1
+3
+dataa14
+-1
+3
+dataa13
+-1
+3
+dataa12
+-1
+3
+dataa11
+-1
+3
+dataa10
+-1
+3
+dataa1
+-1
+3
+dataa0
+-1
+3
+aeb
+-1
+3
+}
+# hierarchies {
+SECGEN:inst3|lpm_counter2:inst|lpm_counter:lpm_counter_component|cntr_gel:auto_generated|cmpr_5hc:cmpr1
+}
+# macro_sequence
+
+# end
+# entity
+StopperControl
+# storage
+db|Game.(6).cnf
+db|Game.(6).cnf
+# case_insensitive
+# source_file
+stoppercontrol.bdf
+971ba7fb57a8cf8ca46ca17a5a7e23f
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+StopperControl:inst8
+}
+# macro_sequence
+
+# end
+# entity
+gozer_up
+# storage
+db|Game.(7).cnf
+db|Game.(7).cnf
+# case_insensitive
+# source_file
+gozer_up.bdf
+745150a7e7411bfa3ec938cc02f287e
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+StopperControl:inst8|gozer_up:inst92
+StopperControl:inst8|gozer_up:inst49
+}
+# macro_sequence
+
+# end
+# entity
+hexss
+# storage
+db|Game.(8).cnf
+db|Game.(8).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+hexss.vhd
+2cef72ab4554df9474510f6d1117695
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# hierarchies {
+hexss:inst2
+hexss:inst4
+hexss:inst6
+hexss:inst7
+}
+# lmf
+|altera|91sp2|quartus|lmf|maxplus2.lmf
+a36c8ec425c8a2589af98b2d4daabc3
+# macro_sequence
+
+# end
+# entity
+HEX_Mux
+# storage
+db|Game.(9).cnf
+db|Game.(9).cnf
+# case_insensitive
+# source_file
+hex_mux.bdf
+ac961d076b896326dc414e35d1ab627
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+HEX_Mux:inst25
+}
+# macro_sequence
+
+# end
+# entity
+mux2
+# storage
+db|Game.(10).cnf
+db|Game.(10).cnf
+# case_insensitive
+# source_file
+mux2.bdf
+35903f8a274089b3fe10aaaca07265c
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+HEX_Mux:inst25|mux2:inst8
+HEX_Mux:inst25|mux2:inst9
+HEX_Mux:inst25|mux2:inst10
+HEX_Mux:inst25|mux2:inst11
+HEX_Mux:inst25|mux2:inst
+HEX_Mux:inst25|mux2:inst1
+HEX_Mux:inst25|mux2:inst2
+HEX_Mux:inst25|mux2:inst3
+HEX_Mux:inst25|mux2:inst12
+HEX_Mux:inst25|mux2:inst13
+HEX_Mux:inst25|mux2:inst14
+HEX_Mux:inst25|mux2:inst15
+HEX_Mux:inst25|mux2:inst4
+HEX_Mux:inst25|mux2:inst5
+HEX_Mux:inst25|mux2:inst6
+HEX_Mux:inst25|mux2:inst7
+}
+# macro_sequence
+
+# end
+# entity
+Memory
+# storage
+db|Game.(11).cnf
+db|Game.(11).cnf
+# case_insensitive
+# source_file
+memory.bdf
+a82275d97fee850518288a9a99ef257
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+Memory:inst9
+}
+# macro_sequence
+
+# end
+# entity
+Counter
+# storage
+db|Game.(12).cnf
+db|Game.(12).cnf
+# case_insensitive
+# source_file
+counter.bdf
+db283131b676d7c748c199534cbc95
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+Counter:inst5
+Counter:inst
+}
+# macro_sequence
+
+# end
+# entity
+lpm_counter0
+# storage
+db|Game.(13).cnf
+db|Game.(13).cnf
+# case_insensitive
+# source_file
+lpm_counter0.tdf
+dc8dc44f299d78da668ed01550dd19
+7
+# used_port {
+q3
+-1
+3
+q2
+-1
+3
+q1
+-1
+3
+q0
+-1
+3
+cout
+-1
+3
+cnt_en
+-1
+3
+clock
+-1
+3
+aclr
+-1
+3
+}
+# include_file {
+lpm_counter.inc
+c5cfeeabc5f2ab60b3453f6abbc42b41
+}
+# hierarchies {
+Counter:inst5|lpm_counter0:inst
+Counter:inst|lpm_counter0:inst
+}
+# macro_sequence
+
+# end
+# entity
+lpm_counter
+# storage
+db|Game.(14).cnf
+db|Game.(14).cnf
+# case_insensitive
+# source_file
+|altera|91sp2|quartus|libraries|megafunctions|lpm_counter.tdf
+151f75e8fcf5e87e72b7df6bb2ea
+7
+# user_parameter {
+AUTO_CARRY_CHAINS
+ON
+AUTO_CARRY
+USR
+IGNORE_CARRY_BUFFERS
+OFF
+IGNORE_CARRY
+USR
+AUTO_CASCADE_CHAINS
+ON
+AUTO_CASCADE
+USR
+IGNORE_CASCADE_BUFFERS
+OFF
+IGNORE_CASCADE
+USR
+LPM_WIDTH
+4
+PARAMETER_UNKNOWN
+USR
+LPM_DIRECTION
+UP
+PARAMETER_UNKNOWN
+USR
+LPM_MODULUS
+10
+PARAMETER_UNKNOWN
+USR
+LPM_AVALUE
+UNUSED
+PARAMETER_UNKNOWN
+DEF
+LPM_SVALUE
+UNUSED
+PARAMETER_UNKNOWN
+DEF
+LPM_PORT_UPDOWN
+PORT_UNUSED
+PARAMETER_UNKNOWN
+USR
+DEVICE_FAMILY
+Cyclone III
+PARAMETER_UNKNOWN
+USR
+CARRY_CHAIN
+MANUAL
+PARAMETER_UNKNOWN
+USR
+CARRY_CHAIN_LENGTH
+48
+CARRY_CHAIN_LENGTH
+USR
+NOT_GATE_PUSH_BACK
+ON
+NOT_GATE_PUSH_BACK
+USR
+CARRY_CNT_EN
+SMART
+PARAMETER_UNKNOWN
+DEF
+LABWIDE_SCLR
+ON
+PARAMETER_UNKNOWN
+DEF
+USE_NEW_VERSION
+TRUE
+PARAMETER_UNKNOWN
+DEF
+CBXI_PARAMETER
+cntr_4lk
+PARAMETER_UNKNOWN
+USR
+}
+# used_port {
+q3
+-1
+3
+q2
+-1
+3
+q1
+-1
+3
+q0
+-1
+3
+cout
+-1
+3
+cnt_en
+-1
+3
+clock
+-1
+3
+aclr
+-1
+3
+}
+# hierarchies {
+Counter:inst5|lpm_counter0:inst|lpm_counter:lpm_counter_component
+Counter:inst|lpm_counter0:inst|lpm_counter:lpm_counter_component
+}
+# macro_sequence
+
+# end
+# entity
+cntr_4lk
+# storage
+db|Game.(15).cnf
+db|Game.(15).cnf
+# case_insensitive
+# source_file
+db|cntr_4lk.tdf
+d38dfc171d4c193abdcdc411bc4a1b49
+7
+# used_port {
+q3
+-1
+3
+q2
+-1
+3
+q1
+-1
+3
+q0
+-1
+3
+cout
+-1
+3
+cnt_en
+-1
+3
+clock
+-1
+3
+aclr
+-1
+3
+}
+# hierarchies {
+Counter:inst5|lpm_counter0:inst|lpm_counter:lpm_counter_component|cntr_4lk:auto_generated
+Counter:inst|lpm_counter0:inst|lpm_counter:lpm_counter_component|cntr_4lk:auto_generated
+}
+# macro_sequence
+
+# end
+# entity
+cmpr_hfc
+# storage
+db|Game.(16).cnf
+db|Game.(16).cnf
+# case_insensitive
+# source_file
+db|cmpr_hfc.tdf
+92211219e912e9ced8d493a9c615dd
+7
+# used_port {
+datab3
+-1
+3
+datab2
+-1
+3
+datab1
+-1
+3
+datab0
+-1
+3
+dataa3
+-1
+3
+dataa2
+-1
+3
+dataa1
+-1
+3
+dataa0
+-1
+3
+aeb
+-1
+3
+}
+# hierarchies {
+Counter:inst5|lpm_counter0:inst|lpm_counter:lpm_counter_component|cntr_4lk:auto_generated|cmpr_hfc:cmpr1
+Counter:inst5|lpm_counter1:inst3|lpm_counter:lpm_counter_component|cntr_pjk:auto_generated|cmpr_hfc:cmpr1
+Counter:inst|lpm_counter0:inst|lpm_counter:lpm_counter_component|cntr_4lk:auto_generated|cmpr_hfc:cmpr1
+Counter:inst|lpm_counter1:inst3|lpm_counter:lpm_counter_component|cntr_pjk:auto_generated|cmpr_hfc:cmpr1
+}
+# macro_sequence
+
+# end
+# entity
+lpm_counter1
+# storage
+db|Game.(17).cnf
+db|Game.(17).cnf
+# case_insensitive
+# source_file
+lpm_counter1.tdf
+154a21a5ea4fdda6f4e6e3f20231e61
+7
+# used_port {
+q3
+-1
+3
+q2
+-1
+3
+q1
+-1
+3
+q0
+-1
+3
+cout
+-1
+3
+cnt_en
+-1
+3
+clock
+-1
+3
+aclr
+-1
+3
+}
+# include_file {
+lpm_counter.inc
+c5cfeeabc5f2ab60b3453f6abbc42b41
+}
+# hierarchies {
+Counter:inst5|lpm_counter1:inst3
+Counter:inst|lpm_counter1:inst3
+}
+# macro_sequence
+
+# end
+# entity
+lpm_counter
+# storage
+db|Game.(18).cnf
+db|Game.(18).cnf
+# case_insensitive
+# source_file
+|altera|91sp2|quartus|libraries|megafunctions|lpm_counter.tdf
+151f75e8fcf5e87e72b7df6bb2ea
+7
+# user_parameter {
+AUTO_CARRY_CHAINS
+ON
+AUTO_CARRY
+USR
+IGNORE_CARRY_BUFFERS
+OFF
+IGNORE_CARRY
+USR
+AUTO_CASCADE_CHAINS
+ON
+AUTO_CASCADE
+USR
+IGNORE_CASCADE_BUFFERS
+OFF
+IGNORE_CASCADE
+USR
+LPM_WIDTH
+4
+PARAMETER_UNKNOWN
+USR
+LPM_DIRECTION
+UP
+PARAMETER_UNKNOWN
+USR
+LPM_MODULUS
+6
+PARAMETER_UNKNOWN
+USR
+LPM_AVALUE
+UNUSED
+PARAMETER_UNKNOWN
+DEF
+LPM_SVALUE
+UNUSED
+PARAMETER_UNKNOWN
+DEF
+LPM_PORT_UPDOWN
+PORT_UNUSED
+PARAMETER_UNKNOWN
+USR
+DEVICE_FAMILY
+Cyclone III
+PARAMETER_UNKNOWN
+USR
+CARRY_CHAIN
+MANUAL
+PARAMETER_UNKNOWN
+USR
+CARRY_CHAIN_LENGTH
+48
+CARRY_CHAIN_LENGTH
+USR
+NOT_GATE_PUSH_BACK
+ON
+NOT_GATE_PUSH_BACK
+USR
+CARRY_CNT_EN
+SMART
+PARAMETER_UNKNOWN
+DEF
+LABWIDE_SCLR
+ON
+PARAMETER_UNKNOWN
+DEF
+USE_NEW_VERSION
+TRUE
+PARAMETER_UNKNOWN
+DEF
+CBXI_PARAMETER
+cntr_pjk
+PARAMETER_UNKNOWN
+USR
+}
+# used_port {
+q3
+-1
+3
+q2
+-1
+3
+q1
+-1
+3
+q0
+-1
+3
+cout
+-1
+3
+cnt_en
+-1
+3
+clock
+-1
+3
+aclr
+-1
+3
+}
+# hierarchies {
+Counter:inst5|lpm_counter1:inst3|lpm_counter:lpm_counter_component
+Counter:inst|lpm_counter1:inst3|lpm_counter:lpm_counter_component
+}
+# macro_sequence
+
+# end
+# entity
+cntr_pjk
+# storage
+db|Game.(19).cnf
+db|Game.(19).cnf
+# case_insensitive
+# source_file
+db|cntr_pjk.tdf
+f882fa08970685e69eb4fd44f1216bd
+7
+# used_port {
+q3
+-1
+3
+q2
+-1
+3
+q1
+-1
+3
+q0
+-1
+3
+cout
+-1
+3
+cnt_en
+-1
+3
+clock
+-1
+3
+aclr
+-1
+3
+}
+# hierarchies {
+Counter:inst5|lpm_counter1:inst3|lpm_counter:lpm_counter_component|cntr_pjk:auto_generated
+Counter:inst|lpm_counter1:inst3|lpm_counter:lpm_counter_component|cntr_pjk:auto_generated
+}
+# macro_sequence
+
+# end
+# entity
+LEDs
+# storage
+db|Game.(20).cnf
+db|Game.(20).cnf
+# case_insensitive
+# source_file
+leds.bdf
+f4e35ff2749cdd515d131fdee2549ef
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+LEDs:inst1
+}
+# macro_sequence
+
+# end
+# entity
+gozer_du
+# storage
+db|Game.(21).cnf
+db|Game.(21).cnf
+# case_insensitive
+# source_file
+gozer_du.bdf
+61914ff4b3861bf287e5fecc1fe578eb
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+LEDs:inst1|gozer_du:inst28
+LEDs:inst1|gozer_du:inst30
+LEDs:inst1|gozer_du:inst26
+LEDs:inst1|gozer_du:inst20
+LEDs:inst1|gozer_du:inst34
+LEDs:inst1|gozer_du:inst24
+LEDs:inst1|gozer_du:inst22
+LEDs:inst1|gozer_du:inst32
+}
+# macro_sequence
+
+# end
+# complete
+

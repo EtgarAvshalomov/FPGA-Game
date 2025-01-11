@@ -1,0 +1,35 @@
+Quartus II Archive log --	C:/Users/Etgar/Desktop/DE0 FPGA Game/src/Game/Game_restored/Game.qarlog
+
+Archive:	C:/Users/Etgar/Desktop/DE0 FPGA Game/src/Game/Game_restored/Game.qar
+Date:		Sat Jan 11 21:07:39 2025
+Quartus II		9.1 Build 350 03/24/2010 SP 2 SJ Web Edition
+
+	=========== Files Selected: ===========
+C:/Users/Etgar/Desktop/DE0 FPGA Game/src/Game/Game_restored/Counter.bdf
+C:/Users/Etgar/Desktop/DE0 FPGA Game/src/Game/Game_restored/Counter_test.vwf
+C:/Users/Etgar/Desktop/DE0 FPGA Game/src/Game/Game_restored/Game.bdf
+C:/Users/Etgar/Desktop/DE0 FPGA Game/src/Game/Game_restored/Game.dpf
+C:/Users/Etgar/Desktop/DE0 FPGA Game/src/Game/Game_restored/Game.qpf
+C:/Users/Etgar/Desktop/DE0 FPGA Game/src/Game/Game_restored/Game.qsf
+C:/Users/Etgar/Desktop/DE0 FPGA Game/src/Game/Game_restored/HEXSS.vhd
+C:/Users/Etgar/Desktop/DE0 FPGA Game/src/Game/Game_restored/HEX_Mux.bdf
+C:/Users/Etgar/Desktop/DE0 FPGA Game/src/Game/Game_restored/HEX_Mux_test.vwf
+C:/Users/Etgar/Desktop/DE0 FPGA Game/src/Game/Game_restored/LEDs.bdf
+C:/Users/Etgar/Desktop/DE0 FPGA Game/src/Game/Game_restored/LEDs_test.vwf
+C:/Users/Etgar/Desktop/DE0 FPGA Game/src/Game/Game_restored/Memory.bdf
+C:/Users/Etgar/Desktop/DE0 FPGA Game/src/Game/Game_restored/Memory_test.vwf
+C:/Users/Etgar/Desktop/DE0 FPGA Game/src/Game/Game_restored/SECGEN.bdf
+C:/Users/Etgar/Desktop/DE0 FPGA Game/src/Game/Game_restored/StopperControl.bdf
+C:/Users/Etgar/Desktop/DE0 FPGA Game/src/Game/Game_restored/StopperControl_test.vwf
+C:/Users/Etgar/Desktop/DE0 FPGA Game/src/Game/Game_restored/assignment_defaults.qdf
+C:/Users/Etgar/Desktop/DE0 FPGA Game/src/Game/Game_restored/de0_pins.tcl
+C:/Users/Etgar/Desktop/DE0 FPGA Game/src/Game/Game_restored/gozer_du.bdf
+C:/Users/Etgar/Desktop/DE0 FPGA Game/src/Game/Game_restored/gozer_up.bdf
+C:/Users/Etgar/Desktop/DE0 FPGA Game/src/Game/Game_restored/lpm_counter0.tdf
+C:/Users/Etgar/Desktop/DE0 FPGA Game/src/Game/Game_restored/lpm_counter1.tdf
+C:/Users/Etgar/Desktop/DE0 FPGA Game/src/Game/Game_restored/lpm_counter2.tdf
+C:/Users/Etgar/Desktop/DE0 FPGA Game/src/Game/Game_restored/mux2.bdf
+	======= Total: 24 files to archive =======
+
+	================ Status: ===============
+All files archived successfully.

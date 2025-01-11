@@ -1,0 +1,1335 @@
+|Game
+HEX2_DP <= SECGEN:inst3.SECGEN_CARRY_OUT
+STOPPER_CLK => SECGEN:inst3.SECGEN_CLK
+STOPPER_CLK => StopperControl:inst8.STOPPER_CLK
+STOPPER_CLK => LEDs:inst1.STOPPER_CLK
+GAME_START => StopperControl:inst8.GAME_START
+STOPPER_RESET => StopperControl:inst8.STOPPER_RESET
+STOPPER_RESET => SECGEN:inst3.SECGEN_RESET
+STOPPER_RESET => Counter:inst.BCD60_RESET
+STOPPER_RESET => Counter:inst5.BCD60_RESET
+SW[0] => StopperControl:inst8.ON_TO_WIN[0]
+SW[0] => LEDs:inst1.SW[0]
+SW[1] => StopperControl:inst8.ON_TO_WIN[1]
+SW[1] => LEDs:inst1.SW[1]
+SW[2] => StopperControl:inst8.ON_TO_WIN[2]
+SW[2] => LEDs:inst1.SW[2]
+SW[3] => StopperControl:inst8.ON_TO_WIN[3]
+SW[3] => LEDs:inst1.SW[3]
+SW[4] => StopperControl:inst8.OFF_TO_WIN[0]
+SW[4] => LEDs:inst1.SW[4]
+SW[5] => StopperControl:inst8.OFF_TO_WIN[1]
+SW[5] => LEDs:inst1.SW[5]
+SW[6] => StopperControl:inst8.OFF_TO_WIN[2]
+SW[6] => LEDs:inst1.SW[6]
+SW[7] => StopperControl:inst8.OFF_TO_WIN[3]
+SW[7] => LEDs:inst1.SW[7]
+HEX0S[0] <= hexss:inst2.ss[0]
+HEX0S[1] <= hexss:inst2.ss[1]
+HEX0S[2] <= hexss:inst2.ss[2]
+HEX0S[3] <= hexss:inst2.ss[3]
+HEX0S[4] <= hexss:inst2.ss[4]
+HEX0S[5] <= hexss:inst2.ss[5]
+HEX0S[6] <= hexss:inst2.ss[6]
+STOPPER_SEL => inst20.IN0
+HEX1S[0] <= hexss:inst4.ss[0]
+HEX1S[1] <= hexss:inst4.ss[1]
+HEX1S[2] <= hexss:inst4.ss[2]
+HEX1S[3] <= hexss:inst4.ss[3]
+HEX1S[4] <= hexss:inst4.ss[4]
+HEX1S[5] <= hexss:inst4.ss[5]
+HEX1S[6] <= hexss:inst4.ss[6]
+HEX2S[0] <= hexss:inst6.ss[0]
+HEX2S[1] <= hexss:inst6.ss[1]
+HEX2S[2] <= hexss:inst6.ss[2]
+HEX2S[3] <= hexss:inst6.ss[3]
+HEX2S[4] <= hexss:inst6.ss[4]
+HEX2S[5] <= hexss:inst6.ss[5]
+HEX2S[6] <= hexss:inst6.ss[6]
+HEX3S[0] <= hexss:inst7.ss[0]
+HEX3S[1] <= hexss:inst7.ss[1]
+HEX3S[2] <= hexss:inst7.ss[2]
+HEX3S[3] <= hexss:inst7.ss[3]
+HEX3S[4] <= hexss:inst7.ss[4]
+HEX3S[5] <= hexss:inst7.ss[5]
+HEX3S[6] <= hexss:inst7.ss[6]
+led[4] <= LEDs:inst1.led[4]
+led[5] <= LEDs:inst1.led[5]
+led[6] <= LEDs:inst1.led[6]
+led[7] <= LEDs:inst1.led[7]
+led[8] <= LEDs:inst1.led[8]
+led[9] <= LEDs:inst1.led[9]
+LED_RESET => LEDs:inst1.LED_RESET
+
+
+|Game|SECGEN:inst3
+SECGEN_SYM_OUT <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+SECGEN_ENA => inst4.IN0
+SECGEN_ENA => lpm_counter2:inst.cnt_en
+SECGEN_CLK => lpm_counter2:inst.clock
+SECGEN_CLK => inst5.CLK
+SECGEN_RESET => inst3.IN0
+SECGEN_CARRY_OUT <= lpm_counter2:inst.cout
+
+
+|Game|SECGEN:inst3|lpm_counter2:inst
+aclr => lpm_counter:lpm_counter_component.aclr
+clock => lpm_counter:lpm_counter_component.clock
+cnt_en => lpm_counter:lpm_counter_component.cnt_en
+sclr => lpm_counter:lpm_counter_component.sclr
+cout <= lpm_counter:lpm_counter_component.cout
+q[0] <= lpm_counter:lpm_counter_component.q[0]
+q[1] <= lpm_counter:lpm_counter_component.q[1]
+q[2] <= lpm_counter:lpm_counter_component.q[2]
+q[3] <= lpm_counter:lpm_counter_component.q[3]
+q[4] <= lpm_counter:lpm_counter_component.q[4]
+q[5] <= lpm_counter:lpm_counter_component.q[5]
+q[6] <= lpm_counter:lpm_counter_component.q[6]
+q[7] <= lpm_counter:lpm_counter_component.q[7]
+q[8] <= lpm_counter:lpm_counter_component.q[8]
+q[9] <= lpm_counter:lpm_counter_component.q[9]
+q[10] <= lpm_counter:lpm_counter_component.q[10]
+q[11] <= lpm_counter:lpm_counter_component.q[11]
+q[12] <= lpm_counter:lpm_counter_component.q[12]
+q[13] <= lpm_counter:lpm_counter_component.q[13]
+q[14] <= lpm_counter:lpm_counter_component.q[14]
+q[15] <= lpm_counter:lpm_counter_component.q[15]
+q[16] <= lpm_counter:lpm_counter_component.q[16]
+q[17] <= lpm_counter:lpm_counter_component.q[17]
+q[18] <= lpm_counter:lpm_counter_component.q[18]
+q[19] <= lpm_counter:lpm_counter_component.q[19]
+q[20] <= lpm_counter:lpm_counter_component.q[20]
+q[21] <= lpm_counter:lpm_counter_component.q[21]
+q[22] <= lpm_counter:lpm_counter_component.q[22]
+q[23] <= lpm_counter:lpm_counter_component.q[23]
+q[24] <= lpm_counter:lpm_counter_component.q[24]
+q[25] <= lpm_counter:lpm_counter_component.q[25]
+
+
+|Game|SECGEN:inst3|lpm_counter2:inst|lpm_counter:lpm_counter_component
+clock => cntr_gel:auto_generated.clock
+clk_en => ~NO_FANOUT~
+cnt_en => cntr_gel:auto_generated.cnt_en
+updown => ~NO_FANOUT~
+aclr => cntr_gel:auto_generated.aclr
+aset => ~NO_FANOUT~
+aconst => ~NO_FANOUT~
+aload => ~NO_FANOUT~
+sclr => cntr_gel:auto_generated.sclr
+sset => ~NO_FANOUT~
+sconst => ~NO_FANOUT~
+sload => ~NO_FANOUT~
+data[0] => ~NO_FANOUT~
+data[1] => ~NO_FANOUT~
+data[2] => ~NO_FANOUT~
+data[3] => ~NO_FANOUT~
+data[4] => ~NO_FANOUT~
+data[5] => ~NO_FANOUT~
+data[6] => ~NO_FANOUT~
+data[7] => ~NO_FANOUT~
+data[8] => ~NO_FANOUT~
+data[9] => ~NO_FANOUT~
+data[10] => ~NO_FANOUT~
+data[11] => ~NO_FANOUT~
+data[12] => ~NO_FANOUT~
+data[13] => ~NO_FANOUT~
+data[14] => ~NO_FANOUT~
+data[15] => ~NO_FANOUT~
+data[16] => ~NO_FANOUT~
+data[17] => ~NO_FANOUT~
+data[18] => ~NO_FANOUT~
+data[19] => ~NO_FANOUT~
+data[20] => ~NO_FANOUT~
+data[21] => ~NO_FANOUT~
+data[22] => ~NO_FANOUT~
+data[23] => ~NO_FANOUT~
+data[24] => ~NO_FANOUT~
+data[25] => ~NO_FANOUT~
+cin => ~NO_FANOUT~
+q[0] <= cntr_gel:auto_generated.q[0]
+q[1] <= cntr_gel:auto_generated.q[1]
+q[2] <= cntr_gel:auto_generated.q[2]
+q[3] <= cntr_gel:auto_generated.q[3]
+q[4] <= cntr_gel:auto_generated.q[4]
+q[5] <= cntr_gel:auto_generated.q[5]
+q[6] <= cntr_gel:auto_generated.q[6]
+q[7] <= cntr_gel:auto_generated.q[7]
+q[8] <= cntr_gel:auto_generated.q[8]
+q[9] <= cntr_gel:auto_generated.q[9]
+q[10] <= cntr_gel:auto_generated.q[10]
+q[11] <= cntr_gel:auto_generated.q[11]
+q[12] <= cntr_gel:auto_generated.q[12]
+q[13] <= cntr_gel:auto_generated.q[13]
+q[14] <= cntr_gel:auto_generated.q[14]
+q[15] <= cntr_gel:auto_generated.q[15]
+q[16] <= cntr_gel:auto_generated.q[16]
+q[17] <= cntr_gel:auto_generated.q[17]
+q[18] <= cntr_gel:auto_generated.q[18]
+q[19] <= cntr_gel:auto_generated.q[19]
+q[20] <= cntr_gel:auto_generated.q[20]
+q[21] <= cntr_gel:auto_generated.q[21]
+q[22] <= cntr_gel:auto_generated.q[22]
+q[23] <= cntr_gel:auto_generated.q[23]
+q[24] <= cntr_gel:auto_generated.q[24]
+q[25] <= cntr_gel:auto_generated.q[25]
+cout <= cntr_gel:auto_generated.cout
+eq[0] <= <GND>
+eq[1] <= <GND>
+eq[2] <= <GND>
+eq[3] <= <GND>
+eq[4] <= <GND>
+eq[5] <= <GND>
+eq[6] <= <GND>
+eq[7] <= <GND>
+eq[8] <= <GND>
+eq[9] <= <GND>
+eq[10] <= <GND>
+eq[11] <= <GND>
+eq[12] <= <GND>
+eq[13] <= <GND>
+eq[14] <= <GND>
+eq[15] <= <GND>
+
+
+|Game|SECGEN:inst3|lpm_counter2:inst|lpm_counter:lpm_counter_component|cntr_gel:auto_generated
+aclr => counter_reg_bit[25].IN0
+clock => counter_reg_bit[25].CLK
+clock => counter_reg_bit[24].CLK
+clock => counter_reg_bit[23].CLK
+clock => counter_reg_bit[22].CLK
+clock => counter_reg_bit[21].CLK
+clock => counter_reg_bit[20].CLK
+clock => counter_reg_bit[19].CLK
+clock => counter_reg_bit[18].CLK
+clock => counter_reg_bit[17].CLK
+clock => counter_reg_bit[16].CLK
+clock => counter_reg_bit[15].CLK
+clock => counter_reg_bit[14].CLK
+clock => counter_reg_bit[13].CLK
+clock => counter_reg_bit[12].CLK
+clock => counter_reg_bit[11].CLK
+clock => counter_reg_bit[10].CLK
+clock => counter_reg_bit[9].CLK
+clock => counter_reg_bit[8].CLK
+clock => counter_reg_bit[7].CLK
+clock => counter_reg_bit[6].CLK
+clock => counter_reg_bit[5].CLK
+clock => counter_reg_bit[4].CLK
+clock => counter_reg_bit[3].CLK
+clock => counter_reg_bit[2].CLK
+clock => counter_reg_bit[1].CLK
+clock => counter_reg_bit[0].CLK
+cnt_en => _.IN1
+cout <= cout_actual.DB_MAX_OUTPUT_PORT_TYPE
+q[0] <= counter_reg_bit[0].DB_MAX_OUTPUT_PORT_TYPE
+q[1] <= counter_reg_bit[1].DB_MAX_OUTPUT_PORT_TYPE
+q[2] <= counter_reg_bit[2].DB_MAX_OUTPUT_PORT_TYPE
+q[3] <= counter_reg_bit[3].DB_MAX_OUTPUT_PORT_TYPE
+q[4] <= counter_reg_bit[4].DB_MAX_OUTPUT_PORT_TYPE
+q[5] <= counter_reg_bit[5].DB_MAX_OUTPUT_PORT_TYPE
+q[6] <= counter_reg_bit[6].DB_MAX_OUTPUT_PORT_TYPE
+q[7] <= counter_reg_bit[7].DB_MAX_OUTPUT_PORT_TYPE
+q[8] <= counter_reg_bit[8].DB_MAX_OUTPUT_PORT_TYPE
+q[9] <= counter_reg_bit[9].DB_MAX_OUTPUT_PORT_TYPE
+q[10] <= counter_reg_bit[10].DB_MAX_OUTPUT_PORT_TYPE
+q[11] <= counter_reg_bit[11].DB_MAX_OUTPUT_PORT_TYPE
+q[12] <= counter_reg_bit[12].DB_MAX_OUTPUT_PORT_TYPE
+q[13] <= counter_reg_bit[13].DB_MAX_OUTPUT_PORT_TYPE
+q[14] <= counter_reg_bit[14].DB_MAX_OUTPUT_PORT_TYPE
+q[15] <= counter_reg_bit[15].DB_MAX_OUTPUT_PORT_TYPE
+q[16] <= counter_reg_bit[16].DB_MAX_OUTPUT_PORT_TYPE
+q[17] <= counter_reg_bit[17].DB_MAX_OUTPUT_PORT_TYPE
+q[18] <= counter_reg_bit[18].DB_MAX_OUTPUT_PORT_TYPE
+q[19] <= counter_reg_bit[19].DB_MAX_OUTPUT_PORT_TYPE
+q[20] <= counter_reg_bit[20].DB_MAX_OUTPUT_PORT_TYPE
+q[21] <= counter_reg_bit[21].DB_MAX_OUTPUT_PORT_TYPE
+q[22] <= counter_reg_bit[22].DB_MAX_OUTPUT_PORT_TYPE
+q[23] <= counter_reg_bit[23].DB_MAX_OUTPUT_PORT_TYPE
+q[24] <= counter_reg_bit[24].DB_MAX_OUTPUT_PORT_TYPE
+q[25] <= counter_reg_bit[25].DB_MAX_OUTPUT_PORT_TYPE
+sclr => _.IN0
+sclr => _.IN0
+sclr => _.IN0
+
+
+|Game|SECGEN:inst3|lpm_counter2:inst|lpm_counter:lpm_counter_component|cntr_gel:auto_generated|cmpr_5hc:cmpr1
+aeb <= aeb_result_wire[0].DB_MAX_OUTPUT_PORT_TYPE
+dataa[0] => data_wire[4].IN0
+dataa[1] => data_wire[4].IN0
+dataa[2] => data_wire[5].IN0
+dataa[3] => data_wire[5].IN0
+dataa[4] => data_wire[6].IN0
+dataa[5] => data_wire[6].IN0
+dataa[6] => data_wire[7].IN0
+dataa[7] => data_wire[7].IN0
+dataa[8] => data_wire[8].IN0
+dataa[9] => data_wire[8].IN0
+dataa[10] => data_wire[9].IN0
+dataa[11] => data_wire[9].IN0
+dataa[12] => data_wire[10].IN0
+dataa[13] => data_wire[10].IN0
+dataa[14] => data_wire[11].IN0
+dataa[15] => data_wire[11].IN0
+dataa[16] => data_wire[12].IN0
+dataa[17] => data_wire[12].IN0
+dataa[18] => data_wire[13].IN0
+dataa[19] => data_wire[13].IN0
+dataa[20] => data_wire[14].IN0
+dataa[21] => data_wire[14].IN0
+dataa[22] => data_wire[15].IN0
+dataa[23] => data_wire[15].IN0
+dataa[24] => data_wire[16].IN0
+dataa[25] => data_wire[16].IN0
+datab[0] => data_wire[4].IN1
+datab[1] => data_wire[4].IN1
+datab[2] => data_wire[5].IN1
+datab[3] => data_wire[5].IN1
+datab[4] => data_wire[6].IN1
+datab[5] => data_wire[6].IN1
+datab[6] => data_wire[7].IN1
+datab[7] => data_wire[7].IN1
+datab[8] => data_wire[8].IN1
+datab[9] => data_wire[8].IN1
+datab[10] => data_wire[9].IN1
+datab[11] => data_wire[9].IN1
+datab[12] => data_wire[10].IN1
+datab[13] => data_wire[10].IN1
+datab[14] => data_wire[11].IN1
+datab[15] => data_wire[11].IN1
+datab[16] => data_wire[12].IN1
+datab[17] => data_wire[12].IN1
+datab[18] => data_wire[13].IN1
+datab[19] => data_wire[13].IN1
+datab[20] => data_wire[14].IN1
+datab[21] => data_wire[14].IN1
+datab[22] => data_wire[15].IN1
+datab[23] => data_wire[15].IN1
+datab[24] => data_wire[16].IN1
+datab[25] => data_wire[16].IN1
+
+
+|Game|StopperControl:inst8
+GAME_OVER <= gozer_up:inst92.dout
+OFF_TO_WIN[0] => inst10.IN0
+OFF_TO_WIN[1] => inst11.IN0
+OFF_TO_WIN[2] => inst12.IN0
+OFF_TO_WIN[3] => inst13.IN0
+ON_TO_WIN[0] => inst.IN7
+ON_TO_WIN[1] => inst.IN5
+ON_TO_WIN[2] => inst.IN4
+ON_TO_WIN[3] => inst.IN6
+STOPPER_CLK => gozer_up:inst92.clk
+STOPPER_CLK => gozer_up:inst49.clk
+STOPPER_RESET => gozer_up:inst92.resetN
+STOPPER_RESET => gozer_up:inst49.resetN
+OUT_ENA <= inst25.DB_MAX_OUTPUT_PORT_TYPE
+GAME_START => inst74.IN0
+
+
+|Game|StopperControl:inst8|gozer_up:inst92
+dout <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+resetN => inst.ACLR
+resetN => inst7.ACLR
+clk => inst.CLK
+clk => inst7.CLK
+din => inst.DATAIN
+
+
+|Game|StopperControl:inst8|gozer_up:inst49
+dout <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+resetN => inst.ACLR
+resetN => inst7.ACLR
+clk => inst.CLK
+clk => inst7.CLK
+din => inst.DATAIN
+
+
+|Game|hexss:inst2
+din[0] => Equal0.IN0
+din[0] => Equal1.IN3
+din[0] => Equal2.IN1
+din[0] => Equal3.IN3
+din[0] => Equal4.IN1
+din[0] => Equal5.IN3
+din[0] => Equal6.IN2
+din[0] => Equal7.IN3
+din[0] => Equal8.IN1
+din[0] => Equal9.IN3
+din[0] => Equal10.IN2
+din[0] => Equal11.IN3
+din[0] => Equal12.IN2
+din[0] => Equal13.IN3
+din[0] => Equal14.IN3
+din[1] => Equal0.IN3
+din[1] => Equal1.IN0
+din[1] => Equal2.IN0
+din[1] => Equal3.IN2
+din[1] => Equal4.IN3
+din[1] => Equal5.IN1
+din[1] => Equal6.IN1
+din[1] => Equal7.IN2
+din[1] => Equal8.IN3
+din[1] => Equal9.IN1
+din[1] => Equal10.IN1
+din[1] => Equal11.IN2
+din[1] => Equal12.IN3
+din[1] => Equal13.IN2
+din[1] => Equal14.IN2
+din[2] => Equal0.IN2
+din[2] => Equal1.IN2
+din[2] => Equal2.IN3
+din[2] => Equal3.IN0
+din[2] => Equal4.IN0
+din[2] => Equal5.IN0
+din[2] => Equal6.IN0
+din[2] => Equal7.IN1
+din[2] => Equal8.IN2
+din[2] => Equal9.IN2
+din[2] => Equal10.IN3
+din[2] => Equal11.IN1
+din[2] => Equal12.IN1
+din[2] => Equal13.IN1
+din[2] => Equal14.IN1
+din[3] => Equal0.IN1
+din[3] => Equal1.IN1
+din[3] => Equal2.IN2
+din[3] => Equal3.IN1
+din[3] => Equal4.IN2
+din[3] => Equal5.IN2
+din[3] => Equal6.IN3
+din[3] => Equal7.IN0
+din[3] => Equal8.IN0
+din[3] => Equal9.IN0
+din[3] => Equal10.IN0
+din[3] => Equal11.IN0
+din[3] => Equal12.IN0
+din[3] => Equal13.IN0
+din[3] => Equal14.IN0
+ss[0] <= ss.DB_MAX_OUTPUT_PORT_TYPE
+ss[1] <= ss.DB_MAX_OUTPUT_PORT_TYPE
+ss[2] <= ss.DB_MAX_OUTPUT_PORT_TYPE
+ss[3] <= ss.DB_MAX_OUTPUT_PORT_TYPE
+ss[4] <= ss.DB_MAX_OUTPUT_PORT_TYPE
+ss[5] <= ss.DB_MAX_OUTPUT_PORT_TYPE
+ss[6] <= ss.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Game|HEX_Mux:inst25
+ONES_MIN[0] <= mux2:inst8.y
+ONES_MIN[1] <= mux2:inst9.y
+ONES_MIN[2] <= mux2:inst10.y
+ONES_MIN[3] <= mux2:inst11.y
+sel => mux2:inst8.sel
+sel => mux2:inst9.sel
+sel => mux2:inst10.sel
+sel => mux2:inst11.sel
+sel => mux2:inst.sel
+sel => mux2:inst1.sel
+sel => mux2:inst2.sel
+sel => mux2:inst3.sel
+sel => mux2:inst12.sel
+sel => mux2:inst13.sel
+sel => mux2:inst14.sel
+sel => mux2:inst15.sel
+sel => mux2:inst4.sel
+sel => mux2:inst5.sel
+sel => mux2:inst6.sel
+sel => mux2:inst7.sel
+ALT_ONES_MIN[0] => mux2:inst8.i[0]
+ALT_ONES_MIN[1] => mux2:inst9.i[0]
+ALT_ONES_MIN[2] => mux2:inst10.i[0]
+ALT_ONES_MIN[3] => mux2:inst11.i[0]
+BCD60_ONES_MIN[0] => mux2:inst8.i[1]
+BCD60_ONES_MIN[1] => mux2:inst9.i[1]
+BCD60_ONES_MIN[2] => mux2:inst10.i[1]
+BCD60_ONES_MIN[3] => mux2:inst11.i[1]
+ONES_SEC[0] <= mux2:inst.y
+ONES_SEC[1] <= mux2:inst1.y
+ONES_SEC[2] <= mux2:inst2.y
+ONES_SEC[3] <= mux2:inst3.y
+ALT_ONES_SEC[0] => mux2:inst.i[0]
+ALT_ONES_SEC[1] => mux2:inst1.i[0]
+ALT_ONES_SEC[2] => mux2:inst2.i[0]
+ALT_ONES_SEC[3] => mux2:inst3.i[0]
+BCD60_ONES_SEC[0] => mux2:inst.i[1]
+BCD60_ONES_SEC[1] => mux2:inst1.i[1]
+BCD60_ONES_SEC[2] => mux2:inst2.i[1]
+BCD60_ONES_SEC[3] => mux2:inst3.i[1]
+TENS_MIN[0] <= mux2:inst12.y
+TENS_MIN[1] <= mux2:inst13.y
+TENS_MIN[2] <= mux2:inst14.y
+TENS_MIN[3] <= mux2:inst15.y
+ALT_TENS_MIN[0] => mux2:inst12.i[0]
+ALT_TENS_MIN[1] => mux2:inst13.i[0]
+ALT_TENS_MIN[2] => mux2:inst14.i[0]
+ALT_TENS_MIN[3] => mux2:inst15.i[0]
+BCD60_TENS_MIN[0] => mux2:inst12.i[1]
+BCD60_TENS_MIN[1] => mux2:inst13.i[1]
+BCD60_TENS_MIN[2] => mux2:inst14.i[1]
+BCD60_TENS_MIN[3] => mux2:inst15.i[1]
+TENS_SEC[0] <= mux2:inst4.y
+TENS_SEC[1] <= mux2:inst5.y
+TENS_SEC[2] <= mux2:inst6.y
+TENS_SEC[3] <= mux2:inst7.y
+ALT_TENS_SEC[0] => mux2:inst4.i[0]
+ALT_TENS_SEC[1] => mux2:inst5.i[0]
+ALT_TENS_SEC[2] => mux2:inst6.i[0]
+ALT_TENS_SEC[3] => mux2:inst7.i[0]
+BCD60_TENS_SEC[0] => mux2:inst4.i[1]
+BCD60_TENS_SEC[1] => mux2:inst5.i[1]
+BCD60_TENS_SEC[2] => mux2:inst6.i[1]
+BCD60_TENS_SEC[3] => mux2:inst7.i[1]
+
+
+|Game|HEX_Mux:inst25|mux2:inst8
+y <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+i[0] => inst.IN0
+i[1] => inst3.IN0
+sel => inst3.IN1
+sel => inst4.IN0
+
+
+|Game|HEX_Mux:inst25|mux2:inst9
+y <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+i[0] => inst.IN0
+i[1] => inst3.IN0
+sel => inst3.IN1
+sel => inst4.IN0
+
+
+|Game|HEX_Mux:inst25|mux2:inst10
+y <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+i[0] => inst.IN0
+i[1] => inst3.IN0
+sel => inst3.IN1
+sel => inst4.IN0
+
+
+|Game|HEX_Mux:inst25|mux2:inst11
+y <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+i[0] => inst.IN0
+i[1] => inst3.IN0
+sel => inst3.IN1
+sel => inst4.IN0
+
+
+|Game|HEX_Mux:inst25|mux2:inst
+y <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+i[0] => inst.IN0
+i[1] => inst3.IN0
+sel => inst3.IN1
+sel => inst4.IN0
+
+
+|Game|HEX_Mux:inst25|mux2:inst1
+y <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+i[0] => inst.IN0
+i[1] => inst3.IN0
+sel => inst3.IN1
+sel => inst4.IN0
+
+
+|Game|HEX_Mux:inst25|mux2:inst2
+y <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+i[0] => inst.IN0
+i[1] => inst3.IN0
+sel => inst3.IN1
+sel => inst4.IN0
+
+
+|Game|HEX_Mux:inst25|mux2:inst3
+y <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+i[0] => inst.IN0
+i[1] => inst3.IN0
+sel => inst3.IN1
+sel => inst4.IN0
+
+
+|Game|HEX_Mux:inst25|mux2:inst12
+y <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+i[0] => inst.IN0
+i[1] => inst3.IN0
+sel => inst3.IN1
+sel => inst4.IN0
+
+
+|Game|HEX_Mux:inst25|mux2:inst13
+y <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+i[0] => inst.IN0
+i[1] => inst3.IN0
+sel => inst3.IN1
+sel => inst4.IN0
+
+
+|Game|HEX_Mux:inst25|mux2:inst14
+y <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+i[0] => inst.IN0
+i[1] => inst3.IN0
+sel => inst3.IN1
+sel => inst4.IN0
+
+
+|Game|HEX_Mux:inst25|mux2:inst15
+y <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+i[0] => inst.IN0
+i[1] => inst3.IN0
+sel => inst3.IN1
+sel => inst4.IN0
+
+
+|Game|HEX_Mux:inst25|mux2:inst4
+y <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+i[0] => inst.IN0
+i[1] => inst3.IN0
+sel => inst3.IN1
+sel => inst4.IN0
+
+
+|Game|HEX_Mux:inst25|mux2:inst5
+y <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+i[0] => inst.IN0
+i[1] => inst3.IN0
+sel => inst3.IN1
+sel => inst4.IN0
+
+
+|Game|HEX_Mux:inst25|mux2:inst6
+y <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+i[0] => inst.IN0
+i[1] => inst3.IN0
+sel => inst3.IN1
+sel => inst4.IN0
+
+
+|Game|HEX_Mux:inst25|mux2:inst7
+y <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+i[0] => inst.IN0
+i[1] => inst3.IN0
+sel => inst3.IN1
+sel => inst4.IN0
+
+
+|Game|Memory:inst9
+ONES_MIN_MEM[0] <= inst31.DB_MAX_OUTPUT_PORT_TYPE
+ONES_MIN_MEM[1] <= inst33.DB_MAX_OUTPUT_PORT_TYPE
+ONES_MIN_MEM[2] <= inst35.DB_MAX_OUTPUT_PORT_TYPE
+ONES_MIN_MEM[3] <= inst36.DB_MAX_OUTPUT_PORT_TYPE
+GAME_OVER => inst31.CLK
+GAME_OVER => inst33.CLK
+GAME_OVER => inst35.CLK
+GAME_OVER => inst36.CLK
+GAME_OVER => inst41.CLK
+GAME_OVER => inst42.CLK
+GAME_OVER => inst43.CLK
+GAME_OVER => inst44.CLK
+GAME_OVER => inst12.CLK
+GAME_OVER => inst23.CLK
+GAME_OVER => inst27.CLK
+GAME_OVER => inst29.CLK
+GAME_OVER => inst37.CLK
+GAME_OVER => inst38.CLK
+GAME_OVER => inst39.CLK
+GAME_OVER => inst40.CLK
+BCD60_ONES_MIN[0] => inst31.DATAIN
+BCD60_ONES_MIN[1] => inst33.DATAIN
+BCD60_ONES_MIN[2] => inst35.DATAIN
+BCD60_ONES_MIN[3] => inst36.DATAIN
+ONES_SEC_MEM[0] <= inst41.DB_MAX_OUTPUT_PORT_TYPE
+ONES_SEC_MEM[1] <= inst42.DB_MAX_OUTPUT_PORT_TYPE
+ONES_SEC_MEM[2] <= inst43.DB_MAX_OUTPUT_PORT_TYPE
+ONES_SEC_MEM[3] <= inst44.DB_MAX_OUTPUT_PORT_TYPE
+BCD60_ONES_SEC[0] => inst41.DATAIN
+BCD60_ONES_SEC[1] => inst42.DATAIN
+BCD60_ONES_SEC[2] => inst43.DATAIN
+BCD60_ONES_SEC[3] => inst44.DATAIN
+TENS_MIN_MEM[0] <= inst12.DB_MAX_OUTPUT_PORT_TYPE
+TENS_MIN_MEM[1] <= inst23.DB_MAX_OUTPUT_PORT_TYPE
+TENS_MIN_MEM[2] <= inst27.DB_MAX_OUTPUT_PORT_TYPE
+TENS_MIN_MEM[3] <= inst29.DB_MAX_OUTPUT_PORT_TYPE
+BCD60_TENS_MIN[0] => inst12.DATAIN
+BCD60_TENS_MIN[1] => inst23.DATAIN
+BCD60_TENS_MIN[2] => inst27.DATAIN
+BCD60_TENS_MIN[3] => inst29.DATAIN
+TENS_SEC_MEM[0] <= inst37.DB_MAX_OUTPUT_PORT_TYPE
+TENS_SEC_MEM[1] <= inst38.DB_MAX_OUTPUT_PORT_TYPE
+TENS_SEC_MEM[2] <= inst39.DB_MAX_OUTPUT_PORT_TYPE
+TENS_SEC_MEM[3] <= inst40.DB_MAX_OUTPUT_PORT_TYPE
+BCD60_TENS_SEC[0] => inst37.DATAIN
+BCD60_TENS_SEC[1] => inst38.DATAIN
+BCD60_TENS_SEC[2] => inst39.DATAIN
+BCD60_TENS_SEC[3] => inst40.DATAIN
+
+
+|Game|Counter:inst5
+BCD60_TC <= inst19.DB_MAX_OUTPUT_PORT_TYPE
+BCD60_CLK => lpm_counter0:inst.clock
+BCD60_CLK => lpm_counter1:inst3.clock
+BCD60_CLK => inst19.CLK
+BCD60_ENA => lpm_counter0:inst.cnt_en
+BCD60_RESET => inst2.IN0
+BCD60_ONES[0] <= lpm_counter0:inst.q[0]
+BCD60_ONES[1] <= lpm_counter0:inst.q[1]
+BCD60_ONES[2] <= lpm_counter0:inst.q[2]
+BCD60_ONES[3] <= lpm_counter0:inst.q[3]
+BCD60_TENS[0] <= lpm_counter1:inst3.q[0]
+BCD60_TENS[1] <= lpm_counter1:inst3.q[1]
+BCD60_TENS[2] <= lpm_counter1:inst3.q[2]
+BCD60_TENS[3] <= lpm_counter1:inst3.q[3]
+
+
+|Game|Counter:inst5|lpm_counter0:inst
+aclr => lpm_counter:lpm_counter_component.aclr
+clock => lpm_counter:lpm_counter_component.clock
+cnt_en => lpm_counter:lpm_counter_component.cnt_en
+cout <= lpm_counter:lpm_counter_component.cout
+q[0] <= lpm_counter:lpm_counter_component.q[0]
+q[1] <= lpm_counter:lpm_counter_component.q[1]
+q[2] <= lpm_counter:lpm_counter_component.q[2]
+q[3] <= lpm_counter:lpm_counter_component.q[3]
+
+
+|Game|Counter:inst5|lpm_counter0:inst|lpm_counter:lpm_counter_component
+clock => cntr_4lk:auto_generated.clock
+clk_en => ~NO_FANOUT~
+cnt_en => cntr_4lk:auto_generated.cnt_en
+updown => ~NO_FANOUT~
+aclr => cntr_4lk:auto_generated.aclr
+aset => ~NO_FANOUT~
+aconst => ~NO_FANOUT~
+aload => ~NO_FANOUT~
+sclr => ~NO_FANOUT~
+sset => ~NO_FANOUT~
+sconst => ~NO_FANOUT~
+sload => ~NO_FANOUT~
+data[0] => ~NO_FANOUT~
+data[1] => ~NO_FANOUT~
+data[2] => ~NO_FANOUT~
+data[3] => ~NO_FANOUT~
+cin => ~NO_FANOUT~
+q[0] <= cntr_4lk:auto_generated.q[0]
+q[1] <= cntr_4lk:auto_generated.q[1]
+q[2] <= cntr_4lk:auto_generated.q[2]
+q[3] <= cntr_4lk:auto_generated.q[3]
+cout <= cntr_4lk:auto_generated.cout
+eq[0] <= <GND>
+eq[1] <= <GND>
+eq[2] <= <GND>
+eq[3] <= <GND>
+eq[4] <= <GND>
+eq[5] <= <GND>
+eq[6] <= <GND>
+eq[7] <= <GND>
+eq[8] <= <GND>
+eq[9] <= <GND>
+eq[10] <= <GND>
+eq[11] <= <GND>
+eq[12] <= <GND>
+eq[13] <= <GND>
+eq[14] <= <GND>
+eq[15] <= <GND>
+
+
+|Game|Counter:inst5|lpm_counter0:inst|lpm_counter:lpm_counter_component|cntr_4lk:auto_generated
+aclr => counter_reg_bit[3].IN0
+clock => counter_reg_bit[3].CLK
+clock => counter_reg_bit[2].CLK
+clock => counter_reg_bit[1].CLK
+clock => counter_reg_bit[0].CLK
+cnt_en => _.IN1
+cout <= cout_actual.DB_MAX_OUTPUT_PORT_TYPE
+q[0] <= counter_reg_bit[0].DB_MAX_OUTPUT_PORT_TYPE
+q[1] <= counter_reg_bit[1].DB_MAX_OUTPUT_PORT_TYPE
+q[2] <= counter_reg_bit[2].DB_MAX_OUTPUT_PORT_TYPE
+q[3] <= counter_reg_bit[3].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Game|Counter:inst5|lpm_counter0:inst|lpm_counter:lpm_counter_component|cntr_4lk:auto_generated|cmpr_hfc:cmpr1
+aeb <= aeb_result_wire[0].DB_MAX_OUTPUT_PORT_TYPE
+dataa[0] => data_wire[0].IN0
+dataa[1] => data_wire[0].IN0
+dataa[2] => data_wire[1].IN0
+dataa[3] => data_wire[1].IN0
+datab[0] => data_wire[0].IN1
+datab[1] => data_wire[0].IN1
+datab[2] => data_wire[1].IN1
+datab[3] => data_wire[1].IN1
+
+
+|Game|Counter:inst5|lpm_counter1:inst3
+aclr => lpm_counter:lpm_counter_component.aclr
+clock => lpm_counter:lpm_counter_component.clock
+cnt_en => lpm_counter:lpm_counter_component.cnt_en
+cout <= lpm_counter:lpm_counter_component.cout
+q[0] <= lpm_counter:lpm_counter_component.q[0]
+q[1] <= lpm_counter:lpm_counter_component.q[1]
+q[2] <= lpm_counter:lpm_counter_component.q[2]
+q[3] <= lpm_counter:lpm_counter_component.q[3]
+
+
+|Game|Counter:inst5|lpm_counter1:inst3|lpm_counter:lpm_counter_component
+clock => cntr_pjk:auto_generated.clock
+clk_en => ~NO_FANOUT~
+cnt_en => cntr_pjk:auto_generated.cnt_en
+updown => ~NO_FANOUT~
+aclr => cntr_pjk:auto_generated.aclr
+aset => ~NO_FANOUT~
+aconst => ~NO_FANOUT~
+aload => ~NO_FANOUT~
+sclr => ~NO_FANOUT~
+sset => ~NO_FANOUT~
+sconst => ~NO_FANOUT~
+sload => ~NO_FANOUT~
+data[0] => ~NO_FANOUT~
+data[1] => ~NO_FANOUT~
+data[2] => ~NO_FANOUT~
+data[3] => ~NO_FANOUT~
+cin => ~NO_FANOUT~
+q[0] <= cntr_pjk:auto_generated.q[0]
+q[1] <= cntr_pjk:auto_generated.q[1]
+q[2] <= cntr_pjk:auto_generated.q[2]
+q[3] <= cntr_pjk:auto_generated.q[3]
+cout <= cntr_pjk:auto_generated.cout
+eq[0] <= <GND>
+eq[1] <= <GND>
+eq[2] <= <GND>
+eq[3] <= <GND>
+eq[4] <= <GND>
+eq[5] <= <GND>
+eq[6] <= <GND>
+eq[7] <= <GND>
+eq[8] <= <GND>
+eq[9] <= <GND>
+eq[10] <= <GND>
+eq[11] <= <GND>
+eq[12] <= <GND>
+eq[13] <= <GND>
+eq[14] <= <GND>
+eq[15] <= <GND>
+
+
+|Game|Counter:inst5|lpm_counter1:inst3|lpm_counter:lpm_counter_component|cntr_pjk:auto_generated
+aclr => counter_reg_bit[3].IN0
+clock => counter_reg_bit[3].CLK
+clock => counter_reg_bit[2].CLK
+clock => counter_reg_bit[1].CLK
+clock => counter_reg_bit[0].CLK
+cnt_en => _.IN1
+cout <= cout_actual.DB_MAX_OUTPUT_PORT_TYPE
+q[0] <= counter_reg_bit[0].DB_MAX_OUTPUT_PORT_TYPE
+q[1] <= counter_reg_bit[1].DB_MAX_OUTPUT_PORT_TYPE
+q[2] <= counter_reg_bit[2].DB_MAX_OUTPUT_PORT_TYPE
+q[3] <= counter_reg_bit[3].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Game|Counter:inst5|lpm_counter1:inst3|lpm_counter:lpm_counter_component|cntr_pjk:auto_generated|cmpr_hfc:cmpr1
+aeb <= aeb_result_wire[0].DB_MAX_OUTPUT_PORT_TYPE
+dataa[0] => data_wire[0].IN0
+dataa[1] => data_wire[0].IN0
+dataa[2] => data_wire[1].IN0
+dataa[3] => data_wire[1].IN0
+datab[0] => data_wire[0].IN1
+datab[1] => data_wire[0].IN1
+datab[2] => data_wire[1].IN1
+datab[3] => data_wire[1].IN1
+
+
+|Game|Counter:inst
+BCD60_TC <= inst19.DB_MAX_OUTPUT_PORT_TYPE
+BCD60_CLK => lpm_counter0:inst.clock
+BCD60_CLK => lpm_counter1:inst3.clock
+BCD60_CLK => inst19.CLK
+BCD60_ENA => lpm_counter0:inst.cnt_en
+BCD60_RESET => inst2.IN0
+BCD60_ONES[0] <= lpm_counter0:inst.q[0]
+BCD60_ONES[1] <= lpm_counter0:inst.q[1]
+BCD60_ONES[2] <= lpm_counter0:inst.q[2]
+BCD60_ONES[3] <= lpm_counter0:inst.q[3]
+BCD60_TENS[0] <= lpm_counter1:inst3.q[0]
+BCD60_TENS[1] <= lpm_counter1:inst3.q[1]
+BCD60_TENS[2] <= lpm_counter1:inst3.q[2]
+BCD60_TENS[3] <= lpm_counter1:inst3.q[3]
+
+
+|Game|Counter:inst|lpm_counter0:inst
+aclr => lpm_counter:lpm_counter_component.aclr
+clock => lpm_counter:lpm_counter_component.clock
+cnt_en => lpm_counter:lpm_counter_component.cnt_en
+cout <= lpm_counter:lpm_counter_component.cout
+q[0] <= lpm_counter:lpm_counter_component.q[0]
+q[1] <= lpm_counter:lpm_counter_component.q[1]
+q[2] <= lpm_counter:lpm_counter_component.q[2]
+q[3] <= lpm_counter:lpm_counter_component.q[3]
+
+
+|Game|Counter:inst|lpm_counter0:inst|lpm_counter:lpm_counter_component
+clock => cntr_4lk:auto_generated.clock
+clk_en => ~NO_FANOUT~
+cnt_en => cntr_4lk:auto_generated.cnt_en
+updown => ~NO_FANOUT~
+aclr => cntr_4lk:auto_generated.aclr
+aset => ~NO_FANOUT~
+aconst => ~NO_FANOUT~
+aload => ~NO_FANOUT~
+sclr => ~NO_FANOUT~
+sset => ~NO_FANOUT~
+sconst => ~NO_FANOUT~
+sload => ~NO_FANOUT~
+data[0] => ~NO_FANOUT~
+data[1] => ~NO_FANOUT~
+data[2] => ~NO_FANOUT~
+data[3] => ~NO_FANOUT~
+cin => ~NO_FANOUT~
+q[0] <= cntr_4lk:auto_generated.q[0]
+q[1] <= cntr_4lk:auto_generated.q[1]
+q[2] <= cntr_4lk:auto_generated.q[2]
+q[3] <= cntr_4lk:auto_generated.q[3]
+cout <= cntr_4lk:auto_generated.cout
+eq[0] <= <GND>
+eq[1] <= <GND>
+eq[2] <= <GND>
+eq[3] <= <GND>
+eq[4] <= <GND>
+eq[5] <= <GND>
+eq[6] <= <GND>
+eq[7] <= <GND>
+eq[8] <= <GND>
+eq[9] <= <GND>
+eq[10] <= <GND>
+eq[11] <= <GND>
+eq[12] <= <GND>
+eq[13] <= <GND>
+eq[14] <= <GND>
+eq[15] <= <GND>
+
+
+|Game|Counter:inst|lpm_counter0:inst|lpm_counter:lpm_counter_component|cntr_4lk:auto_generated
+aclr => counter_reg_bit[3].IN0
+clock => counter_reg_bit[3].CLK
+clock => counter_reg_bit[2].CLK
+clock => counter_reg_bit[1].CLK
+clock => counter_reg_bit[0].CLK
+cnt_en => _.IN1
+cout <= cout_actual.DB_MAX_OUTPUT_PORT_TYPE
+q[0] <= counter_reg_bit[0].DB_MAX_OUTPUT_PORT_TYPE
+q[1] <= counter_reg_bit[1].DB_MAX_OUTPUT_PORT_TYPE
+q[2] <= counter_reg_bit[2].DB_MAX_OUTPUT_PORT_TYPE
+q[3] <= counter_reg_bit[3].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Game|Counter:inst|lpm_counter0:inst|lpm_counter:lpm_counter_component|cntr_4lk:auto_generated|cmpr_hfc:cmpr1
+aeb <= aeb_result_wire[0].DB_MAX_OUTPUT_PORT_TYPE
+dataa[0] => data_wire[0].IN0
+dataa[1] => data_wire[0].IN0
+dataa[2] => data_wire[1].IN0
+dataa[3] => data_wire[1].IN0
+datab[0] => data_wire[0].IN1
+datab[1] => data_wire[0].IN1
+datab[2] => data_wire[1].IN1
+datab[3] => data_wire[1].IN1
+
+
+|Game|Counter:inst|lpm_counter1:inst3
+aclr => lpm_counter:lpm_counter_component.aclr
+clock => lpm_counter:lpm_counter_component.clock
+cnt_en => lpm_counter:lpm_counter_component.cnt_en
+cout <= lpm_counter:lpm_counter_component.cout
+q[0] <= lpm_counter:lpm_counter_component.q[0]
+q[1] <= lpm_counter:lpm_counter_component.q[1]
+q[2] <= lpm_counter:lpm_counter_component.q[2]
+q[3] <= lpm_counter:lpm_counter_component.q[3]
+
+
+|Game|Counter:inst|lpm_counter1:inst3|lpm_counter:lpm_counter_component
+clock => cntr_pjk:auto_generated.clock
+clk_en => ~NO_FANOUT~
+cnt_en => cntr_pjk:auto_generated.cnt_en
+updown => ~NO_FANOUT~
+aclr => cntr_pjk:auto_generated.aclr
+aset => ~NO_FANOUT~
+aconst => ~NO_FANOUT~
+aload => ~NO_FANOUT~
+sclr => ~NO_FANOUT~
+sset => ~NO_FANOUT~
+sconst => ~NO_FANOUT~
+sload => ~NO_FANOUT~
+data[0] => ~NO_FANOUT~
+data[1] => ~NO_FANOUT~
+data[2] => ~NO_FANOUT~
+data[3] => ~NO_FANOUT~
+cin => ~NO_FANOUT~
+q[0] <= cntr_pjk:auto_generated.q[0]
+q[1] <= cntr_pjk:auto_generated.q[1]
+q[2] <= cntr_pjk:auto_generated.q[2]
+q[3] <= cntr_pjk:auto_generated.q[3]
+cout <= cntr_pjk:auto_generated.cout
+eq[0] <= <GND>
+eq[1] <= <GND>
+eq[2] <= <GND>
+eq[3] <= <GND>
+eq[4] <= <GND>
+eq[5] <= <GND>
+eq[6] <= <GND>
+eq[7] <= <GND>
+eq[8] <= <GND>
+eq[9] <= <GND>
+eq[10] <= <GND>
+eq[11] <= <GND>
+eq[12] <= <GND>
+eq[13] <= <GND>
+eq[14] <= <GND>
+eq[15] <= <GND>
+
+
+|Game|Counter:inst|lpm_counter1:inst3|lpm_counter:lpm_counter_component|cntr_pjk:auto_generated
+aclr => counter_reg_bit[3].IN0
+clock => counter_reg_bit[3].CLK
+clock => counter_reg_bit[2].CLK
+clock => counter_reg_bit[1].CLK
+clock => counter_reg_bit[0].CLK
+cnt_en => _.IN1
+cout <= cout_actual.DB_MAX_OUTPUT_PORT_TYPE
+q[0] <= counter_reg_bit[0].DB_MAX_OUTPUT_PORT_TYPE
+q[1] <= counter_reg_bit[1].DB_MAX_OUTPUT_PORT_TYPE
+q[2] <= counter_reg_bit[2].DB_MAX_OUTPUT_PORT_TYPE
+q[3] <= counter_reg_bit[3].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Game|Counter:inst|lpm_counter1:inst3|lpm_counter:lpm_counter_component|cntr_pjk:auto_generated|cmpr_hfc:cmpr1
+aeb <= aeb_result_wire[0].DB_MAX_OUTPUT_PORT_TYPE
+dataa[0] => data_wire[0].IN0
+dataa[1] => data_wire[0].IN0
+dataa[2] => data_wire[1].IN0
+dataa[3] => data_wire[1].IN0
+datab[0] => data_wire[0].IN1
+datab[1] => data_wire[0].IN1
+datab[2] => data_wire[1].IN1
+datab[3] => data_wire[1].IN1
+
+
+|Game|hexss:inst4
+din[0] => Equal0.IN0
+din[0] => Equal1.IN3
+din[0] => Equal2.IN1
+din[0] => Equal3.IN3
+din[0] => Equal4.IN1
+din[0] => Equal5.IN3
+din[0] => Equal6.IN2
+din[0] => Equal7.IN3
+din[0] => Equal8.IN1
+din[0] => Equal9.IN3
+din[0] => Equal10.IN2
+din[0] => Equal11.IN3
+din[0] => Equal12.IN2
+din[0] => Equal13.IN3
+din[0] => Equal14.IN3
+din[1] => Equal0.IN3
+din[1] => Equal1.IN0
+din[1] => Equal2.IN0
+din[1] => Equal3.IN2
+din[1] => Equal4.IN3
+din[1] => Equal5.IN1
+din[1] => Equal6.IN1
+din[1] => Equal7.IN2
+din[1] => Equal8.IN3
+din[1] => Equal9.IN1
+din[1] => Equal10.IN1
+din[1] => Equal11.IN2
+din[1] => Equal12.IN3
+din[1] => Equal13.IN2
+din[1] => Equal14.IN2
+din[2] => Equal0.IN2
+din[2] => Equal1.IN2
+din[2] => Equal2.IN3
+din[2] => Equal3.IN0
+din[2] => Equal4.IN0
+din[2] => Equal5.IN0
+din[2] => Equal6.IN0
+din[2] => Equal7.IN1
+din[2] => Equal8.IN2
+din[2] => Equal9.IN2
+din[2] => Equal10.IN3
+din[2] => Equal11.IN1
+din[2] => Equal12.IN1
+din[2] => Equal13.IN1
+din[2] => Equal14.IN1
+din[3] => Equal0.IN1
+din[3] => Equal1.IN1
+din[3] => Equal2.IN2
+din[3] => Equal3.IN1
+din[3] => Equal4.IN2
+din[3] => Equal5.IN2
+din[3] => Equal6.IN3
+din[3] => Equal7.IN0
+din[3] => Equal8.IN0
+din[3] => Equal9.IN0
+din[3] => Equal10.IN0
+din[3] => Equal11.IN0
+din[3] => Equal12.IN0
+din[3] => Equal13.IN0
+din[3] => Equal14.IN0
+ss[0] <= ss.DB_MAX_OUTPUT_PORT_TYPE
+ss[1] <= ss.DB_MAX_OUTPUT_PORT_TYPE
+ss[2] <= ss.DB_MAX_OUTPUT_PORT_TYPE
+ss[3] <= ss.DB_MAX_OUTPUT_PORT_TYPE
+ss[4] <= ss.DB_MAX_OUTPUT_PORT_TYPE
+ss[5] <= ss.DB_MAX_OUTPUT_PORT_TYPE
+ss[6] <= ss.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Game|hexss:inst6
+din[0] => Equal0.IN0
+din[0] => Equal1.IN3
+din[0] => Equal2.IN1
+din[0] => Equal3.IN3
+din[0] => Equal4.IN1
+din[0] => Equal5.IN3
+din[0] => Equal6.IN2
+din[0] => Equal7.IN3
+din[0] => Equal8.IN1
+din[0] => Equal9.IN3
+din[0] => Equal10.IN2
+din[0] => Equal11.IN3
+din[0] => Equal12.IN2
+din[0] => Equal13.IN3
+din[0] => Equal14.IN3
+din[1] => Equal0.IN3
+din[1] => Equal1.IN0
+din[1] => Equal2.IN0
+din[1] => Equal3.IN2
+din[1] => Equal4.IN3
+din[1] => Equal5.IN1
+din[1] => Equal6.IN1
+din[1] => Equal7.IN2
+din[1] => Equal8.IN3
+din[1] => Equal9.IN1
+din[1] => Equal10.IN1
+din[1] => Equal11.IN2
+din[1] => Equal12.IN3
+din[1] => Equal13.IN2
+din[1] => Equal14.IN2
+din[2] => Equal0.IN2
+din[2] => Equal1.IN2
+din[2] => Equal2.IN3
+din[2] => Equal3.IN0
+din[2] => Equal4.IN0
+din[2] => Equal5.IN0
+din[2] => Equal6.IN0
+din[2] => Equal7.IN1
+din[2] => Equal8.IN2
+din[2] => Equal9.IN2
+din[2] => Equal10.IN3
+din[2] => Equal11.IN1
+din[2] => Equal12.IN1
+din[2] => Equal13.IN1
+din[2] => Equal14.IN1
+din[3] => Equal0.IN1
+din[3] => Equal1.IN1
+din[3] => Equal2.IN2
+din[3] => Equal3.IN1
+din[3] => Equal4.IN2
+din[3] => Equal5.IN2
+din[3] => Equal6.IN3
+din[3] => Equal7.IN0
+din[3] => Equal8.IN0
+din[3] => Equal9.IN0
+din[3] => Equal10.IN0
+din[3] => Equal11.IN0
+din[3] => Equal12.IN0
+din[3] => Equal13.IN0
+din[3] => Equal14.IN0
+ss[0] <= ss.DB_MAX_OUTPUT_PORT_TYPE
+ss[1] <= ss.DB_MAX_OUTPUT_PORT_TYPE
+ss[2] <= ss.DB_MAX_OUTPUT_PORT_TYPE
+ss[3] <= ss.DB_MAX_OUTPUT_PORT_TYPE
+ss[4] <= ss.DB_MAX_OUTPUT_PORT_TYPE
+ss[5] <= ss.DB_MAX_OUTPUT_PORT_TYPE
+ss[6] <= ss.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Game|hexss:inst7
+din[0] => Equal0.IN0
+din[0] => Equal1.IN3
+din[0] => Equal2.IN1
+din[0] => Equal3.IN3
+din[0] => Equal4.IN1
+din[0] => Equal5.IN3
+din[0] => Equal6.IN2
+din[0] => Equal7.IN3
+din[0] => Equal8.IN1
+din[0] => Equal9.IN3
+din[0] => Equal10.IN2
+din[0] => Equal11.IN3
+din[0] => Equal12.IN2
+din[0] => Equal13.IN3
+din[0] => Equal14.IN3
+din[1] => Equal0.IN3
+din[1] => Equal1.IN0
+din[1] => Equal2.IN0
+din[1] => Equal3.IN2
+din[1] => Equal4.IN3
+din[1] => Equal5.IN1
+din[1] => Equal6.IN1
+din[1] => Equal7.IN2
+din[1] => Equal8.IN3
+din[1] => Equal9.IN1
+din[1] => Equal10.IN1
+din[1] => Equal11.IN2
+din[1] => Equal12.IN3
+din[1] => Equal13.IN2
+din[1] => Equal14.IN2
+din[2] => Equal0.IN2
+din[2] => Equal1.IN2
+din[2] => Equal2.IN3
+din[2] => Equal3.IN0
+din[2] => Equal4.IN0
+din[2] => Equal5.IN0
+din[2] => Equal6.IN0
+din[2] => Equal7.IN1
+din[2] => Equal8.IN2
+din[2] => Equal9.IN2
+din[2] => Equal10.IN3
+din[2] => Equal11.IN1
+din[2] => Equal12.IN1
+din[2] => Equal13.IN1
+din[2] => Equal14.IN1
+din[3] => Equal0.IN1
+din[3] => Equal1.IN1
+din[3] => Equal2.IN2
+din[3] => Equal3.IN1
+din[3] => Equal4.IN2
+din[3] => Equal5.IN2
+din[3] => Equal6.IN3
+din[3] => Equal7.IN0
+din[3] => Equal8.IN0
+din[3] => Equal9.IN0
+din[3] => Equal10.IN0
+din[3] => Equal11.IN0
+din[3] => Equal12.IN0
+din[3] => Equal13.IN0
+din[3] => Equal14.IN0
+ss[0] <= ss.DB_MAX_OUTPUT_PORT_TYPE
+ss[1] <= ss.DB_MAX_OUTPUT_PORT_TYPE
+ss[2] <= ss.DB_MAX_OUTPUT_PORT_TYPE
+ss[3] <= ss.DB_MAX_OUTPUT_PORT_TYPE
+ss[4] <= ss.DB_MAX_OUTPUT_PORT_TYPE
+ss[5] <= ss.DB_MAX_OUTPUT_PORT_TYPE
+ss[6] <= ss.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Game|LEDs:inst1
+led[4] <= inst21.DB_MAX_OUTPUT_PORT_TYPE
+led[5] <= inst8.DB_MAX_OUTPUT_PORT_TYPE
+led[6] <= inst9.DB_MAX_OUTPUT_PORT_TYPE
+led[7] <= inst10.DB_MAX_OUTPUT_PORT_TYPE
+led[8] <= inst11.DB_MAX_OUTPUT_PORT_TYPE
+led[9] <= inst13.DB_MAX_OUTPUT_PORT_TYPE
+LED_RESET => inst21.ACLR
+LED_RESET => gozer_du:inst28.resetN
+LED_RESET => gozer_du:inst30.resetN
+LED_RESET => gozer_du:inst26.resetN
+LED_RESET => inst8.ACLR
+LED_RESET => gozer_du:inst20.resetN
+LED_RESET => gozer_du:inst34.resetN
+LED_RESET => gozer_du:inst24.resetN
+LED_RESET => inst9.ACLR
+LED_RESET => gozer_du:inst22.resetN
+LED_RESET => inst10.ACLR
+LED_RESET => gozer_du:inst32.resetN
+LED_RESET => inst11.ACLR
+LED_RESET => inst13.ACLR
+SW[0] => gozer_du:inst20.din
+SW[1] => gozer_du:inst22.din
+SW[2] => gozer_du:inst24.din
+SW[3] => gozer_du:inst26.din
+SW[4] => gozer_du:inst28.din
+SW[5] => gozer_du:inst30.din
+SW[6] => gozer_du:inst32.din
+SW[7] => gozer_du:inst34.din
+STOPPER_CLK => gozer_du:inst28.clk
+STOPPER_CLK => gozer_du:inst30.clk
+STOPPER_CLK => gozer_du:inst26.clk
+STOPPER_CLK => inst21.CLK
+STOPPER_CLK => gozer_du:inst20.clk
+STOPPER_CLK => gozer_du:inst34.clk
+STOPPER_CLK => gozer_du:inst24.clk
+STOPPER_CLK => inst8.CLK
+STOPPER_CLK => gozer_du:inst22.clk
+STOPPER_CLK => inst9.CLK
+STOPPER_CLK => gozer_du:inst32.clk
+STOPPER_CLK => inst10.CLK
+STOPPER_CLK => inst11.CLK
+STOPPER_CLK => inst13.CLK
+
+
+|Game|LEDs:inst1|gozer_du:inst28
+dout <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+resetN => inst.ACLR
+resetN => inst3.ACLR
+clk => inst.CLK
+clk => inst3.CLK
+din => inst.DATAIN
+
+
+|Game|LEDs:inst1|gozer_du:inst30
+dout <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+resetN => inst.ACLR
+resetN => inst3.ACLR
+clk => inst.CLK
+clk => inst3.CLK
+din => inst.DATAIN
+
+
+|Game|LEDs:inst1|gozer_du:inst26
+dout <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+resetN => inst.ACLR
+resetN => inst3.ACLR
+clk => inst.CLK
+clk => inst3.CLK
+din => inst.DATAIN
+
+
+|Game|LEDs:inst1|gozer_du:inst20
+dout <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+resetN => inst.ACLR
+resetN => inst3.ACLR
+clk => inst.CLK
+clk => inst3.CLK
+din => inst.DATAIN
+
+
+|Game|LEDs:inst1|gozer_du:inst34
+dout <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+resetN => inst.ACLR
+resetN => inst3.ACLR
+clk => inst.CLK
+clk => inst3.CLK
+din => inst.DATAIN
+
+
+|Game|LEDs:inst1|gozer_du:inst24
+dout <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+resetN => inst.ACLR
+resetN => inst3.ACLR
+clk => inst.CLK
+clk => inst3.CLK
+din => inst.DATAIN
+
+
+|Game|LEDs:inst1|gozer_du:inst22
+dout <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+resetN => inst.ACLR
+resetN => inst3.ACLR
+clk => inst.CLK
+clk => inst3.CLK
+din => inst.DATAIN
+
+
+|Game|LEDs:inst1|gozer_du:inst32
+dout <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+resetN => inst.ACLR
+resetN => inst3.ACLR
+clk => inst.CLK
+clk => inst3.CLK
+din => inst.DATAIN
+
+

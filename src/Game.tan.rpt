@@ -1,0 +1,395 @@
+Classic Timing Analyzer report for Game
+Thu Aug 08 11:21:52 2024
+Quartus II Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Timing Analyzer Summary
+  3. Timing Analyzer Settings
+  4. Clock Settings Summary
+  5. Parallel Compilation
+  6. Clock Setup: 'STOPPER_CLK'
+  7. Clock Hold: 'STOPPER_CLK'
+  8. tsu
+  9. tco
+ 10. th
+ 11. Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2010 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Timing Analyzer Summary                                                                                                                                                                                                           ;
++------------------------------+------------------------------------------+---------------+------------------------------------------------+----------------------+----------------------+-------------+-------------+--------------+
+; Type                         ; Slack                                    ; Required Time ; Actual Time                                    ; From                 ; To                   ; From Clock  ; To Clock    ; Failed Paths ;
++------------------------------+------------------------------------------+---------------+------------------------------------------------+----------------------+----------------------+-------------+-------------+--------------+
+; Worst-case tsu               ; N/A                                      ; None          ; 3.658 ns                                       ; SW[0]                ; gozer_du:inst20|inst ; --          ; STOPPER_CLK ; 0            ;
+; Worst-case tco               ; N/A                                      ; None          ; 8.421 ns                                       ; inst8                ; led5                 ; STOPPER_CLK ; --          ; 0            ;
+; Worst-case th                ; N/A                                      ; None          ; -2.330 ns                                      ; SW[6]                ; gozer_du:inst32|inst ; --          ; STOPPER_CLK ; 0            ;
+; Clock Setup: 'STOPPER_CLK'   ; N/A                                      ; None          ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; inst13               ; inst13               ; STOPPER_CLK ; STOPPER_CLK ; 0            ;
+; Clock Hold: 'STOPPER_CLK'    ; Not operational: Clock Skew > Data Delay ; None          ; N/A                                            ; gozer_du:inst24|inst ; inst9                ; STOPPER_CLK ; STOPPER_CLK ; 51           ;
+; Total number of failed paths ;                                          ;               ;                                                ;                      ;                      ;             ;             ; 51           ;
++------------------------------+------------------------------------------+---------------+------------------------------------------------+----------------------+----------------------+-------------+-------------+--------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------+
+; Timing Analyzer Settings                                                                                                                            ;
++------------------------------------------------------------------------------------------------------+--------------------+------+----+-------------+
+; Option                                                                                               ; Setting            ; From ; To ; Entity Name ;
++------------------------------------------------------------------------------------------------------+--------------------+------+----+-------------+
+; Device Name                                                                                          ; EP2S15F484C3       ;      ;    ;             ;
+; Timing Models                                                                                        ; Final              ;      ;    ;             ;
+; Default hold multicycle                                                                              ; Same as Multicycle ;      ;    ;             ;
+; Cut paths between unrelated clock domains                                                            ; On                 ;      ;    ;             ;
+; Cut off read during write signal paths                                                               ; On                 ;      ;    ;             ;
+; Cut off feedback from I/O pins                                                                       ; On                 ;      ;    ;             ;
+; Report Combined Fast/Slow Timing                                                                     ; Off                ;      ;    ;             ;
+; Ignore Clock Settings                                                                                ; Off                ;      ;    ;             ;
+; Analyze latches as synchronous elements                                                              ; On                 ;      ;    ;             ;
+; Enable Recovery/Removal analysis                                                                     ; Off                ;      ;    ;             ;
+; Enable Clock Latency                                                                                 ; Off                ;      ;    ;             ;
+; Use TimeQuest Timing Analyzer                                                                        ; Off                ;      ;    ;             ;
+; Number of source nodes to report per destination node                                                ; 10                 ;      ;    ;             ;
+; Number of destination nodes to report                                                                ; 10                 ;      ;    ;             ;
+; Number of paths to report                                                                            ; 200                ;      ;    ;             ;
+; Report Minimum Timing Checks                                                                         ; Off                ;      ;    ;             ;
+; Use Fast Timing Models                                                                               ; Off                ;      ;    ;             ;
+; Report IO Paths Separately                                                                           ; Off                ;      ;    ;             ;
+; Perform Multicorner Analysis                                                                         ; On                 ;      ;    ;             ;
+; Reports the worst-case path for each clock domain and analysis                                       ; Off                ;      ;    ;             ;
+; Reports worst-case timing paths for each clock domain and analysis                                   ; Off                ;      ;    ;             ;
+; Specifies the maximum number of worst-case timing paths to report for each clock domain and analysis ; 100                ;      ;    ;             ;
+; Removes common clock path pessimism (CCPP) during slack computation                                  ; Off                ;      ;    ;             ;
+; Output I/O Timing Endpoint                                                                           ; Near End           ;      ;    ;             ;
++------------------------------------------------------------------------------------------------------+--------------------+------+----+-------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clock Settings Summary                                                                                                                                                             ;
++-----------------+--------------------+----------+------------------+---------------+--------------+----------+-----------------------+---------------------+--------+--------------+
+; Clock Node Name ; Clock Setting Name ; Type     ; Fmax Requirement ; Early Latency ; Late Latency ; Based on ; Multiply Base Fmax by ; Divide Base Fmax by ; Offset ; Phase offset ;
++-----------------+--------------------+----------+------------------+---------------+--------------+----------+-----------------------+---------------------+--------+--------------+
+; STOPPER_CLK     ;                    ; User Pin ; None             ; 0.000 ns      ; 0.000 ns     ; --       ; N/A                   ; N/A                 ; N/A    ;              ;
++-----------------+--------------------+----------+------------------+---------------+--------------+----------+-----------------------+---------------------+--------+--------------+
+
+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 8      ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clock Setup: 'STOPPER_CLK'                                                                                                                                                                                             ;
++-------+------------------------------------------------+-----------------------+-----------------------+-------------+-------------+-----------------------------+---------------------------+-------------------------+
+; Slack ; Actual fmax (period)                           ; From                  ; To                    ; From Clock  ; To Clock    ; Required Setup Relationship ; Required Longest P2P Time ; Actual Longest P2P Time ;
++-------+------------------------------------------------+-----------------------+-----------------------+-------------+-------------+-----------------------------+---------------------------+-------------------------+
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; inst13                ; inst13                ; STOPPER_CLK ; STOPPER_CLK ; None                        ; None                      ; 0.396 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; inst9                 ; inst9                 ; STOPPER_CLK ; STOPPER_CLK ; None                        ; None                      ; 0.396 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; inst8                 ; inst8                 ; STOPPER_CLK ; STOPPER_CLK ; None                        ; None                      ; 0.488 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; inst11                ; inst11                ; STOPPER_CLK ; STOPPER_CLK ; None                        ; None                      ; 0.396 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; inst21                ; inst21                ; STOPPER_CLK ; STOPPER_CLK ; None                        ; None                      ; 0.396 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; gozer_du:inst28|inst3 ; inst13                ; STOPPER_CLK ; STOPPER_CLK ; None                        ; None                      ; 2.176 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; inst10                ; inst10                ; STOPPER_CLK ; STOPPER_CLK ; None                        ; None                      ; 0.396 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; gozer_du:inst24|inst  ; gozer_du:inst24|inst3 ; STOPPER_CLK ; STOPPER_CLK ; None                        ; None                      ; 0.634 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; gozer_du:inst32|inst  ; gozer_du:inst32|inst3 ; STOPPER_CLK ; STOPPER_CLK ; None                        ; None                      ; 0.636 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; gozer_du:inst26|inst  ; gozer_du:inst26|inst3 ; STOPPER_CLK ; STOPPER_CLK ; None                        ; None                      ; 0.627 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; gozer_du:inst22|inst  ; gozer_du:inst22|inst3 ; STOPPER_CLK ; STOPPER_CLK ; None                        ; None                      ; 0.619 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; gozer_du:inst20|inst  ; gozer_du:inst20|inst3 ; STOPPER_CLK ; STOPPER_CLK ; None                        ; None                      ; 0.617 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; gozer_du:inst30|inst3 ; inst13                ; STOPPER_CLK ; STOPPER_CLK ; None                        ; None                      ; 2.081 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; gozer_du:inst28|inst  ; gozer_du:inst28|inst3 ; STOPPER_CLK ; STOPPER_CLK ; None                        ; None                      ; 0.555 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; gozer_du:inst30|inst  ; gozer_du:inst30|inst3 ; STOPPER_CLK ; STOPPER_CLK ; None                        ; None                      ; 0.542 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; gozer_du:inst34|inst  ; gozer_du:inst34|inst3 ; STOPPER_CLK ; STOPPER_CLK ; None                        ; None                      ; 0.525 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; gozer_du:inst28|inst  ; inst13                ; STOPPER_CLK ; STOPPER_CLK ; None                        ; None                      ; 1.987 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; gozer_du:inst22|inst3 ; inst9                 ; STOPPER_CLK ; STOPPER_CLK ; None                        ; None                      ; 2.011 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; gozer_du:inst28|inst3 ; inst9                 ; STOPPER_CLK ; STOPPER_CLK ; None                        ; None                      ; 1.945 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; gozer_du:inst20|inst  ; inst9                 ; STOPPER_CLK ; STOPPER_CLK ; None                        ; None                      ; 1.929 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; gozer_du:inst30|inst  ; inst13                ; STOPPER_CLK ; STOPPER_CLK ; None                        ; None                      ; 1.801 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; gozer_du:inst30|inst  ; inst21                ; STOPPER_CLK ; STOPPER_CLK ; None                        ; None                      ; 1.894 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; gozer_du:inst30|inst3 ; inst9                 ; STOPPER_CLK ; STOPPER_CLK ; None                        ; None                      ; 1.850 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; gozer_du:inst28|inst  ; inst21                ; STOPPER_CLK ; STOPPER_CLK ; None                        ; None                      ; 1.861 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; gozer_du:inst24|inst3 ; inst13                ; STOPPER_CLK ; STOPPER_CLK ; None                        ; None                      ; 1.658 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; gozer_du:inst26|inst3 ; inst21                ; STOPPER_CLK ; STOPPER_CLK ; None                        ; None                      ; 1.803 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; gozer_du:inst30|inst3 ; inst21                ; STOPPER_CLK ; STOPPER_CLK ; None                        ; None                      ; 1.802 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; gozer_du:inst28|inst  ; inst9                 ; STOPPER_CLK ; STOPPER_CLK ; None                        ; None                      ; 1.756 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; gozer_du:inst32|inst  ; inst13                ; STOPPER_CLK ; STOPPER_CLK ; None                        ; None                      ; 1.632 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; gozer_du:inst24|inst  ; inst13                ; STOPPER_CLK ; STOPPER_CLK ; None                        ; None                      ; 1.620 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; gozer_du:inst26|inst  ; inst21                ; STOPPER_CLK ; STOPPER_CLK ; None                        ; None                      ; 1.753 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; gozer_du:inst20|inst3 ; inst9                 ; STOPPER_CLK ; STOPPER_CLK ; None                        ; None                      ; 1.695 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; gozer_du:inst26|inst3 ; inst8                 ; STOPPER_CLK ; STOPPER_CLK ; None                        ; None                      ; 1.429 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; gozer_du:inst26|inst  ; inst8                 ; STOPPER_CLK ; STOPPER_CLK ; None                        ; None                      ; 1.425 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; gozer_du:inst22|inst  ; inst9                 ; STOPPER_CLK ; STOPPER_CLK ; None                        ; None                      ; 1.628 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; gozer_du:inst30|inst  ; inst9                 ; STOPPER_CLK ; STOPPER_CLK ; None                        ; None                      ; 1.570 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; gozer_du:inst34|inst  ; inst8                 ; STOPPER_CLK ; STOPPER_CLK ; None                        ; None                      ; 1.321 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; gozer_du:inst20|inst3 ; inst8                 ; STOPPER_CLK ; STOPPER_CLK ; None                        ; None                      ; 1.306 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; gozer_du:inst24|inst3 ; inst9                 ; STOPPER_CLK ; STOPPER_CLK ; None                        ; None                      ; 1.512 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; gozer_du:inst22|inst3 ; inst11                ; STOPPER_CLK ; STOPPER_CLK ; None                        ; None                      ; 1.669 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; gozer_du:inst24|inst3 ; inst8                 ; STOPPER_CLK ; STOPPER_CLK ; None                        ; None                      ; 1.194 ns                ;
++-------+------------------------------------------------+-----------------------+-----------------------+-------------+-------------+-----------------------------+---------------------------+-------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clock Hold: 'STOPPER_CLK'                                                                                                                                                                  ;
++------------------------------------------+-----------------------+--------+-------------+-------------+----------------------------+----------------------------+--------------------------+
+; Minimum Slack                            ; From                  ; To     ; From Clock  ; To Clock    ; Required Hold Relationship ; Required Shortest P2P Time ; Actual Shortest P2P Time ;
++------------------------------------------+-----------------------+--------+-------------+-------------+----------------------------+----------------------------+--------------------------+
+; Not operational: Clock Skew > Data Delay ; gozer_du:inst24|inst  ; inst9  ; STOPPER_CLK ; STOPPER_CLK ; None                       ; None                       ; 1.096 ns                 ;
+; Not operational: Clock Skew > Data Delay ; gozer_du:inst34|inst3 ; inst8  ; STOPPER_CLK ; STOPPER_CLK ; None                       ; None                       ; 0.753 ns                 ;
+; Not operational: Clock Skew > Data Delay ; gozer_du:inst32|inst3 ; inst13 ; STOPPER_CLK ; STOPPER_CLK ; None                       ; None                       ; 1.238 ns                 ;
+; Not operational: Clock Skew > Data Delay ; gozer_du:inst20|inst  ; inst11 ; STOPPER_CLK ; STOPPER_CLK ; None                       ; None                       ; 1.199 ns                 ;
+; Not operational: Clock Skew > Data Delay ; gozer_du:inst24|inst3 ; inst9  ; STOPPER_CLK ; STOPPER_CLK ; None                       ; None                       ; 1.512 ns                 ;
+; Not operational: Clock Skew > Data Delay ; gozer_du:inst24|inst  ; inst8  ; STOPPER_CLK ; STOPPER_CLK ; None                       ; None                       ; 1.061 ns                 ;
+; Not operational: Clock Skew > Data Delay ; gozer_du:inst32|inst  ; inst11 ; STOPPER_CLK ; STOPPER_CLK ; None                       ; None                       ; 1.320 ns                 ;
+; Not operational: Clock Skew > Data Delay ; gozer_du:inst30|inst  ; inst9  ; STOPPER_CLK ; STOPPER_CLK ; None                       ; None                       ; 1.570 ns                 ;
+; Not operational: Clock Skew > Data Delay ; gozer_du:inst32|inst3 ; inst11 ; STOPPER_CLK ; STOPPER_CLK ; None                       ; None                       ; 1.352 ns                 ;
+; Not operational: Clock Skew > Data Delay ; gozer_du:inst22|inst  ; inst11 ; STOPPER_CLK ; STOPPER_CLK ; None                       ; None                       ; 1.357 ns                 ;
+; Not operational: Clock Skew > Data Delay ; gozer_du:inst20|inst3 ; inst11 ; STOPPER_CLK ; STOPPER_CLK ; None                       ; None                       ; 1.363 ns                 ;
+; Not operational: Clock Skew > Data Delay ; gozer_du:inst20|inst  ; inst8  ; STOPPER_CLK ; STOPPER_CLK ; None                       ; None                       ; 1.142 ns                 ;
+; Not operational: Clock Skew > Data Delay ; gozer_du:inst22|inst  ; inst9  ; STOPPER_CLK ; STOPPER_CLK ; None                       ; None                       ; 1.628 ns                 ;
+; Not operational: Clock Skew > Data Delay ; gozer_du:inst24|inst3 ; inst8  ; STOPPER_CLK ; STOPPER_CLK ; None                       ; None                       ; 1.194 ns                 ;
+; Not operational: Clock Skew > Data Delay ; gozer_du:inst20|inst3 ; inst9  ; STOPPER_CLK ; STOPPER_CLK ; None                       ; None                       ; 1.695 ns                 ;
+; Not operational: Clock Skew > Data Delay ; gozer_du:inst24|inst  ; inst13 ; STOPPER_CLK ; STOPPER_CLK ; None                       ; None                       ; 1.620 ns                 ;
+; Not operational: Clock Skew > Data Delay ; gozer_du:inst32|inst  ; inst13 ; STOPPER_CLK ; STOPPER_CLK ; None                       ; None                       ; 1.632 ns                 ;
+; Not operational: Clock Skew > Data Delay ; gozer_du:inst26|inst  ; inst11 ; STOPPER_CLK ; STOPPER_CLK ; None                       ; None                       ; 1.482 ns                 ;
+; Not operational: Clock Skew > Data Delay ; gozer_du:inst26|inst3 ; inst11 ; STOPPER_CLK ; STOPPER_CLK ; None                       ; None                       ; 1.486 ns                 ;
+; Not operational: Clock Skew > Data Delay ; gozer_du:inst24|inst3 ; inst10 ; STOPPER_CLK ; STOPPER_CLK ; None                       ; None                       ; 1.144 ns                 ;
+; Not operational: Clock Skew > Data Delay ; gozer_du:inst24|inst3 ; inst13 ; STOPPER_CLK ; STOPPER_CLK ; None                       ; None                       ; 1.658 ns                 ;
+; Not operational: Clock Skew > Data Delay ; gozer_du:inst28|inst  ; inst9  ; STOPPER_CLK ; STOPPER_CLK ; None                       ; None                       ; 1.756 ns                 ;
+; Not operational: Clock Skew > Data Delay ; gozer_du:inst20|inst3 ; inst8  ; STOPPER_CLK ; STOPPER_CLK ; None                       ; None                       ; 1.306 ns                 ;
+; Not operational: Clock Skew > Data Delay ; gozer_du:inst28|inst  ; inst11 ; STOPPER_CLK ; STOPPER_CLK ; None                       ; None                       ; 1.554 ns                 ;
+; Not operational: Clock Skew > Data Delay ; gozer_du:inst34|inst  ; inst8  ; STOPPER_CLK ; STOPPER_CLK ; None                       ; None                       ; 1.321 ns                 ;
+; Not operational: Clock Skew > Data Delay ; gozer_du:inst28|inst3 ; inst21 ; STOPPER_CLK ; STOPPER_CLK ; None                       ; None                       ; 1.426 ns                 ;
+; Not operational: Clock Skew > Data Delay ; gozer_du:inst28|inst3 ; inst11 ; STOPPER_CLK ; STOPPER_CLK ; None                       ; None                       ; 1.597 ns                 ;
+; Not operational: Clock Skew > Data Delay ; gozer_du:inst30|inst3 ; inst9  ; STOPPER_CLK ; STOPPER_CLK ; None                       ; None                       ; 1.850 ns                 ;
+; Not operational: Clock Skew > Data Delay ; gozer_du:inst30|inst  ; inst13 ; STOPPER_CLK ; STOPPER_CLK ; None                       ; None                       ; 1.801 ns                 ;
+; Not operational: Clock Skew > Data Delay ; gozer_du:inst26|inst  ; inst8  ; STOPPER_CLK ; STOPPER_CLK ; None                       ; None                       ; 1.425 ns                 ;
+; Not operational: Clock Skew > Data Delay ; gozer_du:inst26|inst3 ; inst8  ; STOPPER_CLK ; STOPPER_CLK ; None                       ; None                       ; 1.429 ns                 ;
+; Not operational: Clock Skew > Data Delay ; gozer_du:inst22|inst3 ; inst11 ; STOPPER_CLK ; STOPPER_CLK ; None                       ; None                       ; 1.669 ns                 ;
+; Not operational: Clock Skew > Data Delay ; gozer_du:inst20|inst  ; inst9  ; STOPPER_CLK ; STOPPER_CLK ; None                       ; None                       ; 1.929 ns                 ;
+; Not operational: Clock Skew > Data Delay ; gozer_du:inst28|inst3 ; inst9  ; STOPPER_CLK ; STOPPER_CLK ; None                       ; None                       ; 1.945 ns                 ;
+; Not operational: Clock Skew > Data Delay ; gozer_du:inst32|inst  ; inst10 ; STOPPER_CLK ; STOPPER_CLK ; None                       ; None                       ; 1.345 ns                 ;
+; Not operational: Clock Skew > Data Delay ; inst13                ; inst13 ; STOPPER_CLK ; STOPPER_CLK ; None                       ; None                       ; 0.396 ns                 ;
+; Not operational: Clock Skew > Data Delay ; gozer_du:inst24|inst  ; inst10 ; STOPPER_CLK ; STOPPER_CLK ; None                       ; None                       ; 1.395 ns                 ;
+; Not operational: Clock Skew > Data Delay ; gozer_du:inst22|inst3 ; inst9  ; STOPPER_CLK ; STOPPER_CLK ; None                       ; None                       ; 2.011 ns                 ;
+; Not operational: Clock Skew > Data Delay ; inst9                 ; inst9  ; STOPPER_CLK ; STOPPER_CLK ; None                       ; None                       ; 0.396 ns                 ;
+; Not operational: Clock Skew > Data Delay ; gozer_du:inst32|inst3 ; inst10 ; STOPPER_CLK ; STOPPER_CLK ; None                       ; None                       ; 1.422 ns                 ;
+; Not operational: Clock Skew > Data Delay ; gozer_du:inst28|inst  ; inst13 ; STOPPER_CLK ; STOPPER_CLK ; None                       ; None                       ; 1.987 ns                 ;
+; Not operational: Clock Skew > Data Delay ; gozer_du:inst26|inst  ; inst21 ; STOPPER_CLK ; STOPPER_CLK ; None                       ; None                       ; 1.753 ns                 ;
+; Not operational: Clock Skew > Data Delay ; gozer_du:inst30|inst3 ; inst13 ; STOPPER_CLK ; STOPPER_CLK ; None                       ; None                       ; 2.081 ns                 ;
+; Not operational: Clock Skew > Data Delay ; gozer_du:inst30|inst3 ; inst21 ; STOPPER_CLK ; STOPPER_CLK ; None                       ; None                       ; 1.802 ns                 ;
+; Not operational: Clock Skew > Data Delay ; gozer_du:inst26|inst3 ; inst21 ; STOPPER_CLK ; STOPPER_CLK ; None                       ; None                       ; 1.803 ns                 ;
+; Not operational: Clock Skew > Data Delay ; gozer_du:inst28|inst  ; inst21 ; STOPPER_CLK ; STOPPER_CLK ; None                       ; None                       ; 1.861 ns                 ;
+; Not operational: Clock Skew > Data Delay ; gozer_du:inst28|inst3 ; inst13 ; STOPPER_CLK ; STOPPER_CLK ; None                       ; None                       ; 2.176 ns                 ;
+; Not operational: Clock Skew > Data Delay ; gozer_du:inst30|inst  ; inst21 ; STOPPER_CLK ; STOPPER_CLK ; None                       ; None                       ; 1.894 ns                 ;
+; Not operational: Clock Skew > Data Delay ; inst8                 ; inst8  ; STOPPER_CLK ; STOPPER_CLK ; None                       ; None                       ; 0.488 ns                 ;
+; Not operational: Clock Skew > Data Delay ; inst11                ; inst11 ; STOPPER_CLK ; STOPPER_CLK ; None                       ; None                       ; 0.396 ns                 ;
+; Not operational: Clock Skew > Data Delay ; inst21                ; inst21 ; STOPPER_CLK ; STOPPER_CLK ; None                       ; None                       ; 0.396 ns                 ;
++------------------------------------------+-----------------------+--------+-------------+-------------+----------------------------+----------------------------+--------------------------+
+
+
++--------------------------------------------------------------------------------+
+; tsu                                                                            ;
++-------+--------------+------------+-------+----------------------+-------------+
+; Slack ; Required tsu ; Actual tsu ; From  ; To                   ; To Clock    ;
++-------+--------------+------------+-------+----------------------+-------------+
+; N/A   ; None         ; 3.658 ns   ; SW[0] ; gozer_du:inst20|inst ; STOPPER_CLK ;
+; N/A   ; None         ; 2.856 ns   ; SW[2] ; gozer_du:inst24|inst ; STOPPER_CLK ;
+; N/A   ; None         ; 2.821 ns   ; SW[5] ; gozer_du:inst30|inst ; STOPPER_CLK ;
+; N/A   ; None         ; 2.809 ns   ; SW[1] ; gozer_du:inst22|inst ; STOPPER_CLK ;
+; N/A   ; None         ; 2.755 ns   ; SW[4] ; gozer_du:inst28|inst ; STOPPER_CLK ;
+; N/A   ; None         ; 2.664 ns   ; SW[7] ; gozer_du:inst34|inst ; STOPPER_CLK ;
+; N/A   ; None         ; 2.647 ns   ; SW[3] ; gozer_du:inst26|inst ; STOPPER_CLK ;
+; N/A   ; None         ; 2.569 ns   ; SW[6] ; gozer_du:inst32|inst ; STOPPER_CLK ;
++-------+--------------+------------+-------+----------------------+-------------+
+
+
++-----------------------------------------------------------------+
+; tco                                                             ;
++-------+--------------+------------+--------+------+-------------+
+; Slack ; Required tco ; Actual tco ; From   ; To   ; From Clock  ;
++-------+--------------+------------+--------+------+-------------+
+; N/A   ; None         ; 8.421 ns   ; inst8  ; led5 ; STOPPER_CLK ;
+; N/A   ; None         ; 7.846 ns   ; inst10 ; led7 ; STOPPER_CLK ;
+; N/A   ; None         ; 7.650 ns   ; inst13 ; led9 ; STOPPER_CLK ;
+; N/A   ; None         ; 7.594 ns   ; inst11 ; led8 ; STOPPER_CLK ;
+; N/A   ; None         ; 7.564 ns   ; inst21 ; led4 ; STOPPER_CLK ;
+; N/A   ; None         ; 7.518 ns   ; inst9  ; led6 ; STOPPER_CLK ;
++-------+--------------+------------+--------+------+-------------+
+
+
++--------------------------------------------------------------------------------------+
+; th                                                                                   ;
++---------------+-------------+-----------+-------+----------------------+-------------+
+; Minimum Slack ; Required th ; Actual th ; From  ; To                   ; To Clock    ;
++---------------+-------------+-----------+-------+----------------------+-------------+
+; N/A           ; None        ; -2.330 ns ; SW[6] ; gozer_du:inst32|inst ; STOPPER_CLK ;
+; N/A           ; None        ; -2.408 ns ; SW[3] ; gozer_du:inst26|inst ; STOPPER_CLK ;
+; N/A           ; None        ; -2.425 ns ; SW[7] ; gozer_du:inst34|inst ; STOPPER_CLK ;
+; N/A           ; None        ; -2.516 ns ; SW[4] ; gozer_du:inst28|inst ; STOPPER_CLK ;
+; N/A           ; None        ; -2.570 ns ; SW[1] ; gozer_du:inst22|inst ; STOPPER_CLK ;
+; N/A           ; None        ; -2.582 ns ; SW[5] ; gozer_du:inst30|inst ; STOPPER_CLK ;
+; N/A           ; None        ; -2.617 ns ; SW[2] ; gozer_du:inst24|inst ; STOPPER_CLK ;
+; N/A           ; None        ; -3.419 ns ; SW[0] ; gozer_du:inst20|inst ; STOPPER_CLK ;
++---------------+-------------+-----------+-------+----------------------+-------------+
+
+
++--------------------------+
+; Timing Analyzer Messages ;
++--------------------------+
+Info: *******************************************************************
+Info: Running Quartus II Classic Timing Analyzer
+    Info: Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
+    Info: Processing started: Thu Aug 08 11:21:52 2024
+Info: Command: quartus_tan --read_settings_files=off --write_settings_files=off Game -c Game --timing_analysis_only
+Warning: Found pins functioning as undefined clocks and/or memory enables
+    Info: Assuming node "STOPPER_CLK" is an undefined clock
+Warning: Found 26 node(s) in clock paths which may be acting as ripple and/or gated clocks -- node(s) analyzed as buffer(s) resulting in clock skew
+    Info: Detected gated clock "inst19" as buffer
+    Info: Detected gated clock "inst18~0" as buffer
+    Info: Detected gated clock "inst18" as buffer
+    Info: Detected ripple clock "gozer_du:inst32|inst" as buffer
+    Info: Detected ripple clock "gozer_du:inst32|inst3" as buffer
+    Info: Detected gated clock "inst17" as buffer
+    Info: Detected ripple clock "gozer_du:inst22|inst" as buffer
+    Info: Detected ripple clock "gozer_du:inst22|inst3" as buffer
+    Info: Detected gated clock "inst14~1" as buffer
+    Info: Detected gated clock "inst16~0" as buffer
+    Info: Detected gated clock "inst16" as buffer
+    Info: Detected ripple clock "gozer_du:inst20|inst3" as buffer
+    Info: Detected ripple clock "gozer_du:inst20|inst" as buffer
+    Info: Detected ripple clock "gozer_du:inst24|inst3" as buffer
+    Info: Detected ripple clock "gozer_du:inst34|inst3" as buffer
+    Info: Detected gated clock "inst15~0" as buffer
+    Info: Detected ripple clock "gozer_du:inst34|inst" as buffer
+    Info: Detected ripple clock "gozer_du:inst24|inst" as buffer
+    Info: Detected gated clock "inst15" as buffer
+    Info: Detected ripple clock "gozer_du:inst26|inst" as buffer
+    Info: Detected ripple clock "gozer_du:inst28|inst3" as buffer
+    Info: Detected ripple clock "gozer_du:inst30|inst3" as buffer
+    Info: Detected ripple clock "gozer_du:inst26|inst3" as buffer
+    Info: Detected ripple clock "gozer_du:inst30|inst" as buffer
+    Info: Detected ripple clock "gozer_du:inst28|inst" as buffer
+    Info: Detected gated clock "inst14" as buffer
+Info: Clock "STOPPER_CLK" Internal fmax is restricted to 500.0 MHz between source register "inst13" and destination register "inst13"
+    Info: fmax restricted to clock pin edge rate 2.0 ns. Expand message to see actual delay path.
+        Info: + Longest register to register delay is 0.396 ns
+            Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LCFF_X7_Y4_N1; Fanout = 2; REG Node = 'inst13'
+            Info: 2: + IC(0.000 ns) + CELL(0.241 ns) = 0.241 ns; Loc. = LCCOMB_X7_Y4_N0; Fanout = 1; COMB Node = 'inst13~0'
+            Info: 3: + IC(0.000 ns) + CELL(0.155 ns) = 0.396 ns; Loc. = LCFF_X7_Y4_N1; Fanout = 2; REG Node = 'inst13'
+            Info: Total cell delay = 0.396 ns ( 100.00 % )
+        Info: - Smallest clock skew is -0.938 ns
+            Info: + Shortest clock path from clock "STOPPER_CLK" to destination register is 3.845 ns
+                Info: 1: + IC(0.000 ns) + CELL(0.827 ns) = 0.827 ns; Loc. = PIN_U13; Fanout = 16; CLK Node = 'STOPPER_CLK'
+                Info: 2: + IC(0.900 ns) + CELL(0.712 ns) = 2.439 ns; Loc. = LCFF_X10_Y4_N29; Fanout = 3; REG Node = 'gozer_du:inst32|inst3'
+                Info: 3: + IC(0.000 ns) + CELL(0.241 ns) = 2.680 ns; Loc. = LCCOMB_X10_Y4_N28; Fanout = 2; COMB Node = 'inst19'
+                Info: 4: + IC(0.547 ns) + CELL(0.618 ns) = 3.845 ns; Loc. = LCFF_X7_Y4_N1; Fanout = 2; REG Node = 'inst13'
+                Info: Total cell delay = 2.398 ns ( 62.37 % )
+                Info: Total interconnect delay = 1.447 ns ( 37.63 % )
+            Info: - Longest clock path from clock "STOPPER_CLK" to source register is 4.783 ns
+                Info: 1: + IC(0.000 ns) + CELL(0.827 ns) = 0.827 ns; Loc. = PIN_U13; Fanout = 16; CLK Node = 'STOPPER_CLK'
+                Info: 2: + IC(0.900 ns) + CELL(0.712 ns) = 2.439 ns; Loc. = LCFF_X10_Y4_N11; Fanout = 3; REG Node = 'gozer_du:inst28|inst3'
+                Info: 3: + IC(0.344 ns) + CELL(0.272 ns) = 3.055 ns; Loc. = LCCOMB_X10_Y4_N6; Fanout = 2; COMB Node = 'inst14~1'
+                Info: 4: + IC(0.510 ns) + CELL(0.053 ns) = 3.618 ns; Loc. = LCCOMB_X10_Y4_N28; Fanout = 2; COMB Node = 'inst19'
+                Info: 5: + IC(0.547 ns) + CELL(0.618 ns) = 4.783 ns; Loc. = LCFF_X7_Y4_N1; Fanout = 2; REG Node = 'inst13'
+                Info: Total cell delay = 2.482 ns ( 51.89 % )
+                Info: Total interconnect delay = 2.301 ns ( 48.11 % )
+        Info: + Micro clock to output delay of source is 0.094 ns
+        Info: + Micro setup delay of destination is 0.090 ns
+Warning: Circuit may not operate. Detected 51 non-operational path(s) clocked by clock "STOPPER_CLK" with clock skew larger than data delay. See Compilation Report for details.
+Info: Found hold time violation between source  pin or register "gozer_du:inst24|inst" and destination pin or register "inst9" for clock "STOPPER_CLK" (Hold time is 1.493 ns)
+    Info: + Largest clock skew is 2.534 ns
+        Info: + Longest clock path from clock "STOPPER_CLK" to destination register is 4.879 ns
+            Info: 1: + IC(0.000 ns) + CELL(0.827 ns) = 0.827 ns; Loc. = PIN_U13; Fanout = 16; CLK Node = 'STOPPER_CLK'
+            Info: 2: + IC(0.900 ns) + CELL(0.712 ns) = 2.439 ns; Loc. = LCFF_X10_Y4_N9; Fanout = 2; REG Node = 'gozer_du:inst22|inst3'
+            Info: 3: + IC(0.283 ns) + CELL(0.366 ns) = 3.088 ns; Loc. = LCCOMB_X10_Y4_N18; Fanout = 1; COMB Node = 'inst16~0'
+            Info: 4: + IC(0.253 ns) + CELL(0.346 ns) = 3.687 ns; Loc. = LCCOMB_X10_Y4_N16; Fanout = 2; COMB Node = 'inst16'
+            Info: 5: + IC(0.574 ns) + CELL(0.618 ns) = 4.879 ns; Loc. = LCFF_X10_Y3_N17; Fanout = 2; REG Node = 'inst9'
+            Info: Total cell delay = 2.869 ns ( 58.80 % )
+            Info: Total interconnect delay = 2.010 ns ( 41.20 % )
+        Info: - Shortest clock path from clock "STOPPER_CLK" to source register is 2.345 ns
+            Info: 1: + IC(0.000 ns) + CELL(0.827 ns) = 0.827 ns; Loc. = PIN_U13; Fanout = 16; CLK Node = 'STOPPER_CLK'
+            Info: 2: + IC(0.900 ns) + CELL(0.618 ns) = 2.345 ns; Loc. = LCFF_X10_Y4_N17; Fanout = 5; REG Node = 'gozer_du:inst24|inst'
+            Info: Total cell delay = 1.445 ns ( 61.62 % )
+            Info: Total interconnect delay = 0.900 ns ( 38.38 % )
+    Info: - Micro clock to output delay of source is 0.094 ns
+    Info: - Shortest register to register delay is 1.096 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LCFF_X10_Y4_N17; Fanout = 5; REG Node = 'gozer_du:inst24|inst'
+        Info: 2: + IC(0.000 ns) + CELL(0.333 ns) = 0.333 ns; Loc. = LCCOMB_X10_Y4_N16; Fanout = 2; COMB Node = 'inst16'
+        Info: 3: + IC(0.555 ns) + CELL(0.053 ns) = 0.941 ns; Loc. = LCCOMB_X10_Y3_N16; Fanout = 1; COMB Node = 'inst9~0'
+        Info: 4: + IC(0.000 ns) + CELL(0.155 ns) = 1.096 ns; Loc. = LCFF_X10_Y3_N17; Fanout = 2; REG Node = 'inst9'
+        Info: Total cell delay = 0.541 ns ( 49.36 % )
+        Info: Total interconnect delay = 0.555 ns ( 50.64 % )
+    Info: + Micro hold delay of destination is 0.149 ns
+Info: tsu for register "gozer_du:inst20|inst" (data pin = "SW[0]", clock pin = "STOPPER_CLK") is 3.658 ns
+    Info: + Longest pin to register delay is 5.913 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.837 ns) = 0.837 ns; Loc. = PIN_D14; Fanout = 1; PIN Node = 'SW[0]'
+        Info: 2: + IC(4.767 ns) + CELL(0.309 ns) = 5.913 ns; Loc. = LCFF_X10_Y4_N27; Fanout = 3; REG Node = 'gozer_du:inst20|inst'
+        Info: Total cell delay = 1.146 ns ( 19.38 % )
+        Info: Total interconnect delay = 4.767 ns ( 80.62 % )
+    Info: + Micro setup delay of destination is 0.090 ns
+    Info: - Shortest clock path from clock "STOPPER_CLK" to destination register is 2.345 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.827 ns) = 0.827 ns; Loc. = PIN_U13; Fanout = 16; CLK Node = 'STOPPER_CLK'
+        Info: 2: + IC(0.900 ns) + CELL(0.618 ns) = 2.345 ns; Loc. = LCFF_X10_Y4_N27; Fanout = 3; REG Node = 'gozer_du:inst20|inst'
+        Info: Total cell delay = 1.445 ns ( 61.62 % )
+        Info: Total interconnect delay = 0.900 ns ( 38.38 % )
+Info: tco from clock "STOPPER_CLK" to destination pin "led5" through register "inst8" is 8.421 ns
+    Info: + Longest clock path from clock "STOPPER_CLK" to source register is 4.394 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.827 ns) = 0.827 ns; Loc. = PIN_U13; Fanout = 16; CLK Node = 'STOPPER_CLK'
+        Info: 2: + IC(0.900 ns) + CELL(0.712 ns) = 2.439 ns; Loc. = LCFF_X10_Y4_N31; Fanout = 2; REG Node = 'gozer_du:inst26|inst3'
+        Info: 3: + IC(0.256 ns) + CELL(0.272 ns) = 2.967 ns; Loc. = LCCOMB_X10_Y4_N26; Fanout = 2; COMB Node = 'inst15~0'
+        Info: 4: + IC(0.253 ns) + CELL(0.228 ns) = 3.448 ns; Loc. = LCCOMB_X10_Y4_N20; Fanout = 2; COMB Node = 'inst15'
+        Info: 5: + IC(0.328 ns) + CELL(0.618 ns) = 4.394 ns; Loc. = LCFF_X10_Y4_N23; Fanout = 2; REG Node = 'inst8'
+        Info: Total cell delay = 2.657 ns ( 60.47 % )
+        Info: Total interconnect delay = 1.737 ns ( 39.53 % )
+    Info: + Micro clock to output delay of source is 0.094 ns
+    Info: + Longest register to pin delay is 3.933 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LCFF_X10_Y4_N23; Fanout = 2; REG Node = 'inst8'
+        Info: 2: + IC(1.799 ns) + CELL(2.134 ns) = 3.933 ns; Loc. = PIN_U4; Fanout = 0; PIN Node = 'led5'
+        Info: Total cell delay = 2.134 ns ( 54.26 % )
+        Info: Total interconnect delay = 1.799 ns ( 45.74 % )
+Info: th for register "gozer_du:inst32|inst" (data pin = "SW[6]", clock pin = "STOPPER_CLK") is -2.330 ns
+    Info: + Longest clock path from clock "STOPPER_CLK" to destination register is 2.343 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.827 ns) = 0.827 ns; Loc. = PIN_U13; Fanout = 16; CLK Node = 'STOPPER_CLK'
+        Info: 2: + IC(0.898 ns) + CELL(0.618 ns) = 2.343 ns; Loc. = LCFF_X9_Y4_N11; Fanout = 4; REG Node = 'gozer_du:inst32|inst'
+        Info: Total cell delay = 1.445 ns ( 61.67 % )
+        Info: Total interconnect delay = 0.898 ns ( 38.33 % )
+    Info: + Micro hold delay of destination is 0.149 ns
+    Info: - Shortest pin to register delay is 4.822 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.857 ns) = 0.857 ns; Loc. = PIN_AA18; Fanout = 1; PIN Node = 'SW[6]'
+        Info: 2: + IC(3.757 ns) + CELL(0.053 ns) = 4.667 ns; Loc. = LCCOMB_X9_Y4_N10; Fanout = 1; COMB Node = 'gozer_du:inst32|inst~feeder'
+        Info: 3: + IC(0.000 ns) + CELL(0.155 ns) = 4.822 ns; Loc. = LCFF_X9_Y4_N11; Fanout = 4; REG Node = 'gozer_du:inst32|inst'
+        Info: Total cell delay = 1.065 ns ( 22.09 % )
+        Info: Total interconnect delay = 3.757 ns ( 77.91 % )
+Info: Quartus II Classic Timing Analyzer was successful. 0 errors, 3 warnings
+    Info: Peak virtual memory: 192 megabytes
+    Info: Processing ended: Thu Aug 08 11:21:52 2024
+    Info: Elapsed time: 00:00:00
+    Info: Total CPU time (on all processors): 00:00:00
+
+

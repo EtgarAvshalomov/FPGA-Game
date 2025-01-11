@@ -1,0 +1,97 @@
+Restore Archived Project report for Game
+Sat Jan 11 21:10:11 2025
+Quartus II Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Restore Archived Project Summary
+  3. Restore Archived Project Messages
+  4. Files Restored
+  5. Files Not Restored
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2010 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++-------------------------------------------------------------------------+
+; Restore Archived Project Summary                                        ;
++---------------------------------+---------------------------------------+
+; Restore Archived Project Status ; Successful - Sat Jan 11 21:10:11 2025 ;
+; Revision Name                   ; Game                                  ;
+; Top-level Entity Name           ; Game                                  ;
+; Family                          ; Cyclone III                           ;
++---------------------------------+---------------------------------------+
+
+
++-----------------------------------+
+; Restore Archived Project Messages ;
++-----------------------------------+
+Info: Successfully restored 'C:/Users/Etgar/Desktop/DE0 FPGA Game/src/Game.qar' into the 'C:/Users/Etgar/Desktop/DE0 FPGA Game/src/Game_restored/' directory
+Info: Generated report 'Game.restore.rpt'
+Info: Evaluation of Tcl script c:/altera/91sp2/quartus/common/tcl/apps/qpm/qar.tcl was successful
+Info: Quartus II Shell was successful. 0 errors, 25 warnings
+    Info: Peak virtual memory: 141 megabytes
+    Info: Processing ended: Sat Jan 11 21:10:11 2025
+    Info: Elapsed time: 00:00:00
+    Info: Total CPU time (on all processors): 00:00:00
+
+
++----------------+
+; Files Restored ;
++----------------+
+; File Name      ;
++----------------+
+
+
++-------------------------+
+; Files Not Restored      ;
++-------------------------+
+; File Name               ;
++-------------------------+
+; Counter.bdf             ;
+; Counter_test.vwf        ;
+; Game.bdf                ;
+; Game.dpf                ;
+; Game.qpf                ;
+; Game.qsf                ;
+; HEXSS.vhd               ;
+; HEX_Mux.bdf             ;
+; HEX_Mux_test.vwf        ;
+; LEDs.bdf                ;
+; LEDs_test.vwf           ;
+; Memory.bdf              ;
+; Memory_test.vwf         ;
+; SECGEN.bdf              ;
+; StopperControl.bdf      ;
+; StopperControl_test.vwf ;
+; de0_pins.tcl            ;
+; gozer_du.bdf            ;
+; gozer_up.bdf            ;
+; lpm_counter0.tdf        ;
+; lpm_counter1.tdf        ;
+; lpm_counter2.tdf        ;
+; mux2.bdf                ;
+; assignment_defaults.qdf ;
++-------------------------+
+
+

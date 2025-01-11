@@ -1,0 +1,59 @@
+Quartus II Archive log --	C:/Quartus Projects/Game/Game.qarlog
+
+Archive:	C:/Quartus Projects/Game/Game.qar
+Date:		Thu Aug 15 15:31:53 2024
+Quartus II		9.1 Build 350 03/24/2010 SP 2 SJ Web Edition
+
+	=========== Files Selected: ===========
+C:/Quartus Projects/Game/Counter.bdf
+C:/Quartus Projects/Game/Counter_test.vwf
+C:/Quartus Projects/Game/Game.bdf
+C:/Quartus Projects/Game/Game.dpf
+C:/Quartus Projects/Game/Game.qpf
+C:/Quartus Projects/Game/Game.qsf
+C:/Quartus Projects/Game/HEXSS.vhd
+C:/Quartus Projects/Game/HEX_Mux.bdf
+C:/Quartus Projects/Game/HEX_Mux_test.vwf
+C:/Quartus Projects/Game/LEDs.bdf
+C:/Quartus Projects/Game/LEDs_test.vwf
+C:/Quartus Projects/Game/Memory.bdf
+C:/Quartus Projects/Game/Memory_test.vwf
+C:/Quartus Projects/Game/SECGEN.bdf
+C:/Quartus Projects/Game/StopperControl.bdf
+C:/Quartus Projects/Game/StopperControl_test.vwf
+C:/Quartus Projects/Game/de0_pins.tcl
+C:/Quartus Projects/Game/gozer_du.bdf
+C:/Quartus Projects/Game/gozer_up.bdf
+C:/Quartus Projects/Game/lpm_counter0.tdf
+C:/Quartus Projects/Game/lpm_counter1.tdf
+C:/Quartus Projects/Game/lpm_counter2.tdf
+C:/Quartus Projects/Game/mux2.bdf
+c:/altera/91sp2/quartus/bin/assignment_defaults.qdf
+	======= Total: 24 files to archive =======
+
+	================ Status: ===============
+All files archived successfully.
+
+
+******* Archived project restoration attempt on Sat Jan 11 20:57:36 2025
+Source archive file:	C:/Quartus Projects/Game/Game.qar
+Archive was extracted into	C:/Quartus Projects/Game/Game_restored/
+		 - successfully.
+
+
+******* Archived project restoration attempt on Sat Jan 11 21:04:55 2025
+Source archive file:	C:/Quartus Projects/Game/Game.qar
+Archive was extracted into	C:/Quartus Projects/Game/Game_restored/
+		 - successfully.
+
+
+******* Archived project restoration attempt on Sat Jan 11 21:06:44 2025
+Source archive file:	C:/Users/Etgar/Desktop/DE0 FPGA Game/src/Game/Game.qar
+Archive was extracted into	C:/Users/Etgar/Desktop/DE0 FPGA Game/src/Game/Game_restored/
+		 - successfully.
+
+
+******* Archived project restoration attempt on Sat Jan 11 21:10:11 2025
+Source archive file:	C:/Users/Etgar/Desktop/DE0 FPGA Game/src/Game.qar
+Archive was extracted into	C:/Users/Etgar/Desktop/DE0 FPGA Game/src/Game_restored/
+		 - successfully.

@@ -1,0 +1,237 @@
+Simulator report for Game
+Thu Aug 15 15:27:21 2024
+Quartus II Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Simulator Summary
+  3. Simulator Settings
+  4. Simulation Waveforms
+  5. Coverage Summary
+  6. Complete 1/0-Value Coverage
+  7. Missing 1-Value Coverage
+  8. Missing 0-Value Coverage
+  9. Simulator INI Usage
+ 10. Simulator Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2010 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++--------------------------------------------+
+; Simulator Summary                          ;
++-----------------------------+--------------+
+; Type                        ; Value        ;
++-----------------------------+--------------+
+; Simulation Start Time       ; 0 ps         ;
+; Simulation End Time         ; 4.0 us       ;
+; Simulation Netlist Size     ; 52 nodes     ;
+; Simulation Coverage         ;      85.00 % ;
+; Total Number of Transitions ; 1307         ;
+; Simulation Breakpoints      ; 0            ;
+; Family                      ; Cyclone III  ;
+; Device                      ; EP3C16F484C6 ;
++-----------------------------+--------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------+
+; Simulator Settings                                                                                                            ;
++--------------------------------------------------------------------------------------------+------------------+---------------+
+; Option                                                                                     ; Setting          ; Default Value ;
++--------------------------------------------------------------------------------------------+------------------+---------------+
+; Simulation mode                                                                            ; Timing           ; Timing        ;
+; Start time                                                                                 ; 0 ns             ; 0 ns          ;
+; Simulation results format                                                                  ; CVWF             ;               ;
+; Vector input source                                                                        ; Counter_test.vwf ;               ;
+; Add pins automatically to simulation output waveforms                                      ; On               ; On            ;
+; Check outputs                                                                              ; Off              ; Off           ;
+; Report simulation coverage                                                                 ; On               ; On            ;
+; Display complete 1/0 value coverage report                                                 ; On               ; On            ;
+; Display missing 1-value coverage report                                                    ; On               ; On            ;
+; Display missing 0-value coverage report                                                    ; On               ; On            ;
+; Detect setup and hold time violations                                                      ; Off              ; Off           ;
+; Detect glitches                                                                            ; Off              ; Off           ;
+; Disable timing delays in Timing Simulation                                                 ; Off              ; Off           ;
+; Generate Signal Activity File                                                              ; Off              ; Off           ;
+; Generate VCD File for PowerPlay Power Analyzer                                             ; Off              ; Off           ;
+; Group bus channels in simulation results                                                   ; Off              ; Off           ;
+; Preserve fewer signal transitions to reduce memory requirements                            ; On               ; On            ;
+; Trigger vector comparison with the specified mode                                          ; INPUT_EDGE       ; INPUT_EDGE    ;
+; Disable setup and hold time violations detection in input registers of bi-directional pins ; Off              ; Off           ;
+; Overwrite Waveform Inputs With Simulation Outputs                                          ; On               ;               ;
+; Perform Glitch Filtering in Timing Simulation                                              ; Auto             ; Auto          ;
+; Interconnect Delay Model Type                                                              ; Transport        ; Transport     ;
+; Cell Delay Model Type                                                                      ; Transport        ; Transport     ;
++--------------------------------------------------------------------------------------------+------------------+---------------+
+
+
++----------------------+
+; Simulation Waveforms ;
++----------------------+
+Waveform report data cannot be output to ASCII.
+Please use Quartus II to view the waveform report data.
+
+
++--------------------------------------------------------------------+
+; Coverage Summary                                                   ;
++-----------------------------------------------------+--------------+
+; Type                                                ; Value        ;
++-----------------------------------------------------+--------------+
+; Total coverage as a percentage                      ;      85.00 % ;
+; Total nodes checked                                 ; 52           ;
+; Total output ports checked                          ; 60           ;
+; Total output ports with complete 1/0-value coverage ; 51           ;
+; Total output ports with no 1/0-value coverage       ; 9            ;
+; Total output ports with no 1-value coverage         ; 9            ;
+; Total output ports with no 0-value coverage         ; 9            ;
++-----------------------------------------------------+--------------+
+
+
+The following table displays output ports that toggle between 1 and 0 during simulation.
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Complete 1/0-Value Coverage                                                                                                                                                                                                                                                ;
++----------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------+------------------+
+; Node Name                                                                                                                  ; Output Port Name                                                                                                           ; Output Port Type ;
++----------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------+------------------+
+; |Counter|lpm_counter0:inst|lpm_counter:lpm_counter_component|cntr_4lk:auto_generated|counter_reg_bit[3]                    ; |Counter|lpm_counter0:inst|lpm_counter:lpm_counter_component|cntr_4lk:auto_generated|counter_reg_bit[3]                    ; q                ;
+; |Counter|lpm_counter0:inst|lpm_counter:lpm_counter_component|cntr_4lk:auto_generated|counter_reg_bit[2]                    ; |Counter|lpm_counter0:inst|lpm_counter:lpm_counter_component|cntr_4lk:auto_generated|counter_reg_bit[2]                    ; q                ;
+; |Counter|lpm_counter0:inst|lpm_counter:lpm_counter_component|cntr_4lk:auto_generated|counter_reg_bit[1]                    ; |Counter|lpm_counter0:inst|lpm_counter:lpm_counter_component|cntr_4lk:auto_generated|counter_reg_bit[1]                    ; q                ;
+; |Counter|lpm_counter0:inst|lpm_counter:lpm_counter_component|cntr_4lk:auto_generated|counter_reg_bit[0]                    ; |Counter|lpm_counter0:inst|lpm_counter:lpm_counter_component|cntr_4lk:auto_generated|counter_reg_bit[0]                    ; q                ;
+; |Counter|lpm_counter1:inst3|lpm_counter:lpm_counter_component|cntr_pjk:auto_generated|counter_reg_bit[2]                   ; |Counter|lpm_counter1:inst3|lpm_counter:lpm_counter_component|cntr_pjk:auto_generated|counter_reg_bit[2]                   ; q                ;
+; |Counter|lpm_counter1:inst3|lpm_counter:lpm_counter_component|cntr_pjk:auto_generated|counter_reg_bit[1]                   ; |Counter|lpm_counter1:inst3|lpm_counter:lpm_counter_component|cntr_pjk:auto_generated|counter_reg_bit[1]                   ; q                ;
+; |Counter|lpm_counter1:inst3|lpm_counter:lpm_counter_component|cntr_pjk:auto_generated|counter_reg_bit[0]                   ; |Counter|lpm_counter1:inst3|lpm_counter:lpm_counter_component|cntr_pjk:auto_generated|counter_reg_bit[0]                   ; q                ;
+; |Counter|lpm_counter0:inst|lpm_counter:lpm_counter_component|cntr_4lk:auto_generated|counter_comb_bita0                    ; |Counter|lpm_counter0:inst|lpm_counter:lpm_counter_component|cntr_4lk:auto_generated|counter_comb_bita0                    ; combout          ;
+; |Counter|lpm_counter0:inst|lpm_counter:lpm_counter_component|cntr_4lk:auto_generated|counter_comb_bita0                    ; |Counter|lpm_counter0:inst|lpm_counter:lpm_counter_component|cntr_4lk:auto_generated|counter_comb_bita0~COUT               ; cout             ;
+; |Counter|lpm_counter0:inst|lpm_counter:lpm_counter_component|cntr_4lk:auto_generated|counter_comb_bita1                    ; |Counter|lpm_counter0:inst|lpm_counter:lpm_counter_component|cntr_4lk:auto_generated|counter_comb_bita1                    ; combout          ;
+; |Counter|lpm_counter0:inst|lpm_counter:lpm_counter_component|cntr_4lk:auto_generated|counter_comb_bita1                    ; |Counter|lpm_counter0:inst|lpm_counter:lpm_counter_component|cntr_4lk:auto_generated|counter_comb_bita1~COUT               ; cout             ;
+; |Counter|lpm_counter0:inst|lpm_counter:lpm_counter_component|cntr_4lk:auto_generated|counter_comb_bita2                    ; |Counter|lpm_counter0:inst|lpm_counter:lpm_counter_component|cntr_4lk:auto_generated|counter_comb_bita2                    ; combout          ;
+; |Counter|lpm_counter0:inst|lpm_counter:lpm_counter_component|cntr_4lk:auto_generated|counter_comb_bita2                    ; |Counter|lpm_counter0:inst|lpm_counter:lpm_counter_component|cntr_4lk:auto_generated|counter_comb_bita2~COUT               ; cout             ;
+; |Counter|lpm_counter0:inst|lpm_counter:lpm_counter_component|cntr_4lk:auto_generated|counter_comb_bita3                    ; |Counter|lpm_counter0:inst|lpm_counter:lpm_counter_component|cntr_4lk:auto_generated|counter_comb_bita3                    ; combout          ;
+; |Counter|lpm_counter0:inst|lpm_counter:lpm_counter_component|cntr_4lk:auto_generated|counter_comb_bita3                    ; |Counter|lpm_counter0:inst|lpm_counter:lpm_counter_component|cntr_4lk:auto_generated|counter_comb_bita3~COUT               ; cout             ;
+; |Counter|lpm_counter0:inst|lpm_counter:lpm_counter_component|cntr_4lk:auto_generated|counter_comb_bita3~0                  ; |Counter|lpm_counter0:inst|lpm_counter:lpm_counter_component|cntr_4lk:auto_generated|counter_comb_bita3~0                  ; combout          ;
+; |Counter|lpm_counter1:inst3|lpm_counter:lpm_counter_component|cntr_pjk:auto_generated|counter_comb_bita0                   ; |Counter|lpm_counter1:inst3|lpm_counter:lpm_counter_component|cntr_pjk:auto_generated|counter_comb_bita0                   ; combout          ;
+; |Counter|lpm_counter1:inst3|lpm_counter:lpm_counter_component|cntr_pjk:auto_generated|counter_comb_bita0                   ; |Counter|lpm_counter1:inst3|lpm_counter:lpm_counter_component|cntr_pjk:auto_generated|counter_comb_bita0~COUT              ; cout             ;
+; |Counter|lpm_counter1:inst3|lpm_counter:lpm_counter_component|cntr_pjk:auto_generated|counter_comb_bita1                   ; |Counter|lpm_counter1:inst3|lpm_counter:lpm_counter_component|cntr_pjk:auto_generated|counter_comb_bita1                   ; combout          ;
+; |Counter|lpm_counter1:inst3|lpm_counter:lpm_counter_component|cntr_pjk:auto_generated|counter_comb_bita1                   ; |Counter|lpm_counter1:inst3|lpm_counter:lpm_counter_component|cntr_pjk:auto_generated|counter_comb_bita1~COUT              ; cout             ;
+; |Counter|lpm_counter1:inst3|lpm_counter:lpm_counter_component|cntr_pjk:auto_generated|counter_comb_bita2                   ; |Counter|lpm_counter1:inst3|lpm_counter:lpm_counter_component|cntr_pjk:auto_generated|counter_comb_bita2                   ; combout          ;
+; |Counter|lpm_counter1:inst3|lpm_counter:lpm_counter_component|cntr_pjk:auto_generated|counter_comb_bita2                   ; |Counter|lpm_counter1:inst3|lpm_counter:lpm_counter_component|cntr_pjk:auto_generated|counter_comb_bita2~COUT              ; cout             ;
+; |Counter|lpm_counter1:inst3|lpm_counter:lpm_counter_component|cntr_pjk:auto_generated|counter_comb_bita3                   ; |Counter|lpm_counter1:inst3|lpm_counter:lpm_counter_component|cntr_pjk:auto_generated|counter_comb_bita3                   ; combout          ;
+; |Counter|inst19                                                                                                            ; |Counter|inst19                                                                                                            ; q                ;
+; |Counter|lpm_counter1:inst3|lpm_counter:lpm_counter_component|cntr_pjk:auto_generated|cmpr_hfc:cmpr1|aneb_result_wire[0]~0 ; |Counter|lpm_counter1:inst3|lpm_counter:lpm_counter_component|cntr_pjk:auto_generated|cmpr_hfc:cmpr1|aneb_result_wire[0]~0 ; combout          ;
+; |Counter|lpm_counter0:inst|lpm_counter:lpm_counter_component|cntr_4lk:auto_generated|cmpr_hfc:cmpr1|aneb_result_wire[0]~0  ; |Counter|lpm_counter0:inst|lpm_counter:lpm_counter_component|cntr_4lk:auto_generated|cmpr_hfc:cmpr1|aneb_result_wire[0]~0  ; combout          ;
+; |Counter|inst18                                                                                                            ; |Counter|inst18                                                                                                            ; combout          ;
+; |Counter|lpm_counter0:inst|lpm_counter:lpm_counter_component|cntr_4lk:auto_generated|cout_actual                           ; |Counter|lpm_counter0:inst|lpm_counter:lpm_counter_component|cntr_4lk:auto_generated|cout_actual                           ; combout          ;
+; |Counter|lpm_counter1:inst3|lpm_counter:lpm_counter_component|cntr_pjk:auto_generated|cout_actual                          ; |Counter|lpm_counter1:inst3|lpm_counter:lpm_counter_component|cntr_pjk:auto_generated|cout_actual                          ; combout          ;
+; |Counter|inst19~0                                                                                                          ; |Counter|inst19~0                                                                                                          ; combout          ;
+; |Counter|BCD60_TC~output                                                                                                   ; |Counter|BCD60_TC~output                                                                                                   ; o                ;
+; |Counter|BCD60_TC                                                                                                          ; |Counter|BCD60_TC                                                                                                          ; padout           ;
+; |Counter|BCD60_ONES[3]~output                                                                                              ; |Counter|BCD60_ONES[3]~output                                                                                              ; o                ;
+; |Counter|BCD60_ONES[3]                                                                                                     ; |Counter|BCD60_ONES[3]                                                                                                     ; padout           ;
+; |Counter|BCD60_ONES[2]~output                                                                                              ; |Counter|BCD60_ONES[2]~output                                                                                              ; o                ;
+; |Counter|BCD60_ONES[2]                                                                                                     ; |Counter|BCD60_ONES[2]                                                                                                     ; padout           ;
+; |Counter|BCD60_ONES[1]~output                                                                                              ; |Counter|BCD60_ONES[1]~output                                                                                              ; o                ;
+; |Counter|BCD60_ONES[1]                                                                                                     ; |Counter|BCD60_ONES[1]                                                                                                     ; padout           ;
+; |Counter|BCD60_ONES[0]~output                                                                                              ; |Counter|BCD60_ONES[0]~output                                                                                              ; o                ;
+; |Counter|BCD60_ONES[0]                                                                                                     ; |Counter|BCD60_ONES[0]                                                                                                     ; padout           ;
+; |Counter|BCD60_TENS[2]~output                                                                                              ; |Counter|BCD60_TENS[2]~output                                                                                              ; o                ;
+; |Counter|BCD60_TENS[2]                                                                                                     ; |Counter|BCD60_TENS[2]                                                                                                     ; padout           ;
+; |Counter|BCD60_TENS[1]~output                                                                                              ; |Counter|BCD60_TENS[1]~output                                                                                              ; o                ;
+; |Counter|BCD60_TENS[1]                                                                                                     ; |Counter|BCD60_TENS[1]                                                                                                     ; padout           ;
+; |Counter|BCD60_TENS[0]~output                                                                                              ; |Counter|BCD60_TENS[0]~output                                                                                              ; o                ;
+; |Counter|BCD60_TENS[0]                                                                                                     ; |Counter|BCD60_TENS[0]                                                                                                     ; padout           ;
+; |Counter|BCD60_CLK~input                                                                                                   ; |Counter|BCD60_CLK~input                                                                                                   ; o                ;
+; |Counter|BCD60_CLK                                                                                                         ; |Counter|BCD60_CLK                                                                                                         ; padout           ;
+; |Counter|BCD60_ENA~input                                                                                                   ; |Counter|BCD60_ENA~input                                                                                                   ; o                ;
+; |Counter|BCD60_ENA                                                                                                         ; |Counter|BCD60_ENA                                                                                                         ; padout           ;
+; |Counter|BCD60_CLK~inputclkctrl                                                                                            ; |Counter|BCD60_CLK~inputclkctrl                                                                                            ; outclk           ;
++----------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 1 during simulation.
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Missing 1-Value Coverage                                                                                                                                                                                                                      ;
++------------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------+------------------+
+; Node Name                                                                                                  ; Output Port Name                                                                                              ; Output Port Type ;
++------------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------+------------------+
+; |Counter|lpm_counter1:inst3|lpm_counter:lpm_counter_component|cntr_pjk:auto_generated|counter_reg_bit[3]   ; |Counter|lpm_counter1:inst3|lpm_counter:lpm_counter_component|cntr_pjk:auto_generated|counter_reg_bit[3]      ; q                ;
+; |Counter|lpm_counter1:inst3|lpm_counter:lpm_counter_component|cntr_pjk:auto_generated|counter_comb_bita3   ; |Counter|lpm_counter1:inst3|lpm_counter:lpm_counter_component|cntr_pjk:auto_generated|counter_comb_bita3~COUT ; cout             ;
+; |Counter|lpm_counter1:inst3|lpm_counter:lpm_counter_component|cntr_pjk:auto_generated|counter_comb_bita3~0 ; |Counter|lpm_counter1:inst3|lpm_counter:lpm_counter_component|cntr_pjk:auto_generated|counter_comb_bita3~0    ; combout          ;
+; |Counter|~GND                                                                                              ; |Counter|~GND                                                                                                 ; combout          ;
+; |Counter|BCD60_TENS[3]~output                                                                              ; |Counter|BCD60_TENS[3]~output                                                                                 ; o                ;
+; |Counter|BCD60_TENS[3]                                                                                     ; |Counter|BCD60_TENS[3]                                                                                        ; padout           ;
+; |Counter|BCD60_RESET~input                                                                                 ; |Counter|BCD60_RESET~input                                                                                    ; o                ;
+; |Counter|BCD60_RESET                                                                                       ; |Counter|BCD60_RESET                                                                                          ; padout           ;
+; |Counter|BCD60_RESET~inputclkctrl                                                                          ; |Counter|BCD60_RESET~inputclkctrl                                                                             ; outclk           ;
++------------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 0 during simulation.
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Missing 0-Value Coverage                                                                                                                                                                                                                      ;
++------------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------+------------------+
+; Node Name                                                                                                  ; Output Port Name                                                                                              ; Output Port Type ;
++------------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------+------------------+
+; |Counter|lpm_counter1:inst3|lpm_counter:lpm_counter_component|cntr_pjk:auto_generated|counter_reg_bit[3]   ; |Counter|lpm_counter1:inst3|lpm_counter:lpm_counter_component|cntr_pjk:auto_generated|counter_reg_bit[3]      ; q                ;
+; |Counter|lpm_counter1:inst3|lpm_counter:lpm_counter_component|cntr_pjk:auto_generated|counter_comb_bita3   ; |Counter|lpm_counter1:inst3|lpm_counter:lpm_counter_component|cntr_pjk:auto_generated|counter_comb_bita3~COUT ; cout             ;
+; |Counter|lpm_counter1:inst3|lpm_counter:lpm_counter_component|cntr_pjk:auto_generated|counter_comb_bita3~0 ; |Counter|lpm_counter1:inst3|lpm_counter:lpm_counter_component|cntr_pjk:auto_generated|counter_comb_bita3~0    ; combout          ;
+; |Counter|~GND                                                                                              ; |Counter|~GND                                                                                                 ; combout          ;
+; |Counter|BCD60_TENS[3]~output                                                                              ; |Counter|BCD60_TENS[3]~output                                                                                 ; o                ;
+; |Counter|BCD60_TENS[3]                                                                                     ; |Counter|BCD60_TENS[3]                                                                                        ; padout           ;
+; |Counter|BCD60_RESET~input                                                                                 ; |Counter|BCD60_RESET~input                                                                                    ; o                ;
+; |Counter|BCD60_RESET                                                                                       ; |Counter|BCD60_RESET                                                                                          ; padout           ;
+; |Counter|BCD60_RESET~inputclkctrl                                                                          ; |Counter|BCD60_RESET~inputclkctrl                                                                             ; outclk           ;
++------------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------+------------------+
+
+
++---------------------+
+; Simulator INI Usage ;
++--------+------------+
+; Option ; Usage      ;
++--------+------------+
+
+
++--------------------+
+; Simulator Messages ;
++--------------------+
+Info: *******************************************************************
+Info: Running Quartus II Simulator
+    Info: Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
+    Info: Processing started: Thu Aug 15 15:27:21 2024
+Info: Command: quartus_sim --read_settings_files=on --write_settings_files=off Game -c Game
+Info: Using vector source file "C:/Quartus Projects/Game/Counter_test.vwf"
+Info: Overwriting simulation input file with simulation results
+    Info: A backup of Counter_test.vwf called Game.sim_ori.vwf has been created in the db folder
+Warning: Can't find signal in vector source file for input pin "|Counter|BCD60_RESET"
+Info: Option to preserve fewer signal transitions to reduce memory requirements is enabled
+    Info: Simulation has been partitioned into sub-simulations according to the maximum transition count determined by the engine. Transitions from memory will be flushed out to disk at the end of each sub-simulation to reduce memory requirements.
+Info: Simulation partitioned into 1 sub-simulations
+Info: Simulation coverage is      85.00 %
+Info: Number of transitions in simulation is 1307
+Info: Vector file Counter_test.vwf is saved in VWF text format. You can compress it into CVWF format in order to reduce file size. For more details please refer to the Quartus II Help.
+Info: Quartus II Simulator was successful. 0 errors, 1 warning
+    Info: Peak virtual memory: 163 megabytes
+    Info: Processing ended: Thu Aug 15 15:27:21 2024
+    Info: Elapsed time: 00:00:00
+    Info: Total CPU time (on all processors): 00:00:00
+
+
